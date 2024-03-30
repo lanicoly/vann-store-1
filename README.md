@@ -28,3 +28,5 @@ Esse é só o começo! 🌟💪
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
 [^1]: Loja de moda online da orientadora Vanessa Veloso 
+
+<p>teste commit </p>
