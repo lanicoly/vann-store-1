@@ -1,0 +1,215 @@
+body {
+    background-color: #f4e9e0;
+    font-family: 'Montserrat';
+    font-size: 16px;
+}
+
+.titulo {
+    color: #9b431f;
+}
+
+hr {
+    height: 4px;
+    background-color: #9b431f;   
+}
+
+strong {
+    color: #9b431f;
+}
+
+section {
+    display: block;
+    justify-content: center;
+    margin: auto;
+    width: 50%;
+    padding-bottom: 20px;
+}
+
+section h2 {
+    text-align: center;
+}
+
+.hr-compra {
+    height: 1px;
+}
+
+.dados-user {
+    width: 100%;
+}
+
+.nome-data-user {
+    padding-left: 8px;
+    width: 45%;
+}
+
+.endereco-input {
+    padding-top: 10px;
+}
+
+.endereco-barra {
+    width: 85%;
+}
+.nome-input {
+    width: 70%;
+}
+
+.opcao-tamanho span {
+    padding: 10px;
+}
+
+th {
+    color: #9b431f;
+}
+
+.div-tabela-tamanho {
+    border: 1 px #9b431f;
+}
+
+.tabela-tamanho {
+    font-size: 14px;
+    border: 2px solid #9b431f;
+    border-radius: 8px;
+    padding: 4px;
+    background-color: white;
+}
+
+.tabela-tamanho td {
+    padding: 4px;
+    text-align: center;
+}
+
+.tabela-tamanho th {
+    padding: 4px;
+}
+
+.tabela-tamanho thead th{
+padding: 8px;
+}
+
+.tabela-tamanho tbody tr{
+padding: 12px;
+}
+
+input {
+    border-radius: 4px;
+    font-family: 'Montserrat';
+    padding-left: 10px;
+}
+
+.foto-sobre-mim {
+    width: 30%;
+    padding-left: 16px;
+    padding-top: 24px;
+}
+.texto-sobre-mim {
+    display: flex;
+    text-align: left;
+}
+
+.tipo-pagamento {
+    padding-top: 10px;
+}
+
+.fim-pagina {
+    text-align: center;
+}
+
+.fim-pagina hr {
+    height: 1px;
+}
+
+.foto{
+    width: 210px;
+    height: 210px;
+}
+
+img{
+    border-radius: 10px;
+}
+
+
+button {
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    color: white;
+}
+
+.botao-finalizar {
+    background-color: #16C34D;
+}
+
+.botao-cancelar {
+    background-color: #DC0505;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.botao {
+    display: flex;
+    justify-content: center;
+}
+
+.tabela-emilia1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom : .5em;
+    table-layout: fixed;
+    text-align: center;
+}
+
+.tabela-emilia2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom : .5em;
+    table-layout: fixed;
+    text-align: center;
+}
+
+.tabela-emilia3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom : .5em;
+    table-layout: fixed;
+    text-align: center;
+}
+
+.emilia h2{
+    text-align: center;
+    color: #9b431f;
+}
+
+.emilia h3{
+    text-align: center;
+    color: #9b431f;
+}
+
+.tr-ametista{
+    text-align: center;
+    color: #9b431f; 
+}
+.hr-ametista {
+    height: 1px;
+}
+
+.hr-telha {
+    height: 1px;
+}
+
+.hr-collection {
+    height: 1px;
+}
