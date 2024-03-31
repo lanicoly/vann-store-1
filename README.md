@@ -15,9 +15,6 @@ Acesse o arquivo .zip do código aqui: https://drive.google.com/file/d/1OsQ82hTo
    <li>Laís Nicoly</li> 
  </ul>
 
-<!-- Lembrar de fazer tal coisa -->
-
-
 <hr>
 
 Esse é só o começo! 🌟💪
