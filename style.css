@@ -153,6 +153,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 .botao {
     display: flex;
     justify-content: center;
@@ -226,13 +230,22 @@ a {
     top: 0;
     left: 0;
     align-items: center;
+    font-weight: bold;
 }
 
+
+.menu {
+    width: 100%;
+}
 .menu a{
-    padding: 10px;
+    padding: 24px;
     justify-content: center;
     display: inline-block;
     align-items: center;
+}
+
+.menu a :hover {
+    text-decoration: underline;
 }
 
 .conteudo {
