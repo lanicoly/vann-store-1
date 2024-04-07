@@ -213,3 +213,30 @@ a {
 .hr-collection {
     height: 1px;
 }
+
+.nav-bar {
+    height: 64px;
+    width: 100%;
+    background-color: #833111;
+    color: #f4e9e0;
+    position: fixed;
+    display: flex;
+    z-index: 1;
+    text-align: center;
+    top: 0;
+    left: 0;
+    align-items: center;
+}
+
+.menu a{
+    padding: 10px;
+    justify-content: center;
+    display: inline-block;
+    align-items: center;
+}
+
+.conteudo {
+    
+    padding-top: 48px;
+    /* position: static; */
+}
