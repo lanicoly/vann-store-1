@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Vann_Store.css">
     <link rel="shortcut icon" href="images/foto-site-vanessa.ico" type="image/x-icon">
@@ -11,38 +14,38 @@
 </head>
 <body>
     <nav class="nav-bar">
-        <div class="menu">
-            <a href="index.html">Sobre mim</a>
-            <a href="index.html">Coleção</a>
-            <a href="index.html">Compra</a>
-        </div>
+        <span class="vann-store">
+            <h1>Vann Store</h1>
+        </span>
+        <span class="menu">
+            <a href="#sobre-mim">Sobre mim</a>
+            <a href="#colecao">Coleção</a>
+            <a href="#compra">Compra</a>
+        </span>
     </nav>
-    <div class="conteudo">
-        <div class="titulo">
-            <h1 class="titulo">Vann Store</h1>
-            <hr>
-        </div>
+    <div class="conteudo" id="sobre-mim">
         <div class="sarah">
             <table class="table-sarah">
                 <tr>
-                    <td class="foto-sobre-mim"><img src="images/foto-vanessa.jpg" alt="foto-vanessa" width="400"></td>
-                    <td class="texto-sobre-mim">
-                        <ul>
-                            <h2 class="titulo"> Sobre mim: </h2>
-                                <p>Sou de <strong>Floriano - PI</strong>, apaixonada por <strong>moda</strong> e sempre em busca das últimas tendências. Além disso, dedicar-me ao <strong>cuidado do corpo e da mente</strong> é essencial para mim, seja através de exercícios físicos ou momentos de relaxamento. Amo registrar momentos através da arte da <strong>fotografia</strong>, capturando a beleza ao meu redor. Explorar <strong>experiências gastronômicas</strong> é uma das minhas paixões, adoro experimentar sabores e texturas que despertam os sentidos. Estou sempre aberta a novas aventuras e descobertas!</p> 
-                            <h2 class="titulo">Graduada em Análise e Desenvolvimento de Sistemas <strong>(IFPI)</strong></h2>   
-                                <li>Especialização em Docência do Ensino Superior <strong>(FAITEH)</strong> 
-                                <li> Mestrado em Ciência da Computação <strong>(UECE)</strong> 
-                                <li> Como orientadora de projetos de <strong>engenharia de software</strong> na área de tecnologia, minha jornada é uma fusão empolgante de inovação, colaboração e resolução de problemas. Cada projeto representa uma oportunidade única para aplicar conhecimentos avançados, inspirar equipes e alcançar soluções de ponta.
-                            <h2 class="titulo">Criação da loja</h2>
-                                <li> Em fevereiro de 2023 decidi criar a <strong>Vann Store</strong>, loja voltada para o público feminino, com o objetivo de oferecer produtos de matéria-prima de qualidade, para enfatizar o valor da mulher elegante e clássica em diversos momentos do seu dia!
-                        </ul>
-                    </td>
-                </tr>
+                    <div class="conteudo-sobre-mim">
+                        <td class="foto-sobre-mim"><img class="foto-vanessa" src="images/foto-vanessa.jpg" alt="foto-vanessa"></td>
+                        <td class="texto-sobre-mim">
+                            <ul>
+                                <h2 class="titulo"> Sobre mim: </h2>
+                                    <p>Sou de <strong>Floriano - PI</strong>, apaixonada por <strong>moda</strong> e sempre em busca das últimas tendências. Além disso, dedicar-me ao <strong>cuidado do corpo e da mente</strong> é essencial para mim, seja através de exercícios físicos ou momentos de relaxamento. Amo registrar momentos através da arte da <strong>fotografia</strong>, capturando a beleza ao meu redor. Explorar <strong>experiências gastronômicas</strong> é uma das minhas paixões, adoro experimentar sabores e texturas que despertam os sentidos. Estou sempre aberta a novas aventuras e descobertas!</p> 
+                                <h2 class="titulo">Graduada em Análise e Desenvolvimento de Sistemas <strong>(IFPI)</strong></h2> 
+                                        <li>Especialização em Docência do Ensino Superior <strong>(FAITEH)</strong> 
+                                        <li> Mestrado em Ciência da Computação <strong>(UECE)</strong> 
+                                        <li> Como orientadora de projetos de <strong>engenharia de software</strong> na área de tecnologia, minha jornada é uma fusão empolgante de inovação, colaboração e resolução de problemas. Cada projeto representa uma oportunidade única para aplicar conhecimentos avançados, inspirar equipes e alcançar soluções de ponta.  
+                                <h2 class="titulo">Criação da loja</h2>
+                                    <p> Em fevereiro de 2023 decidi criar a <strong>Vann Store</strong>, loja voltada para o público feminino, com o objetivo de oferecer produtos de matéria-prima de qualidade, para enfatizar o valor da mulher elegante e clássica em diversos momentos do seu dia!
+                            </ul>
+                        </td>
+                    </div>
+                    </tr>
             </table>
         </div>
-    
-        <br>
+        <br id="colecao">
         <hr>
         <br>
         <div class="emilia">
@@ -69,9 +72,8 @@
                 </tr>
             </table>
         </div>
-       <br>
-       <hr>
-            
+       <br id="compra">
+       <hr> 
         <div>
             <section>
                 <h2 class="titulo">Informações de Compra</h2>
@@ -82,26 +84,30 @@
                                 <tr>
                                     <form>
                                             <tr>
-                                                <td class="nome-user">
-                                                    <span>
-                                                        <label for="nome">Nome</label>
-                                                        <input class="nome-input" type="text" id="nome">
-                                                    </span> 
-                                                </td> 
-                                                <td class="nome-data-user">
-                                                    <span>
-                                                        <label for="data-nascimento">Data de Nascimento</label>
-                                                        <input type="date" id="data-nascimento">
-                                                    </span>
-                                                </td>
+                                                <tr>
+                                                    <td class="user-input">
+                                                        <span>
+                                                            <label for="nome">Nome</label>
+                                                            <input class="nome-input" type="text" id="nome">
+                                                        </span> 
+                                                    </td> 
+                                                </tr>
+                                                <tr>
+                                                    <td class="user-input" colspan="2">
+                                                        <label for="endereco">Endereço</label>
+                                                        <input type="text" id="endereco" class="endereco-barra">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="user-input">
+                                                        <span class="nome-data-user">
+                                                            <label for="data-nascimento">Data de Nascimento</label>
+                                                            <input type="date" id="data-nascimento">
+                                                        </span>
+                                                    </td>
+                                                </tr>
                                             </tr>
-                                            <tr>
-                                                <td class="endereco-input" colspan="2">
-                                                    <label for="endereco">Endereço</label>
-                                                    <input type="text" id="endereco" class="endereco-barra">
-                                                </td>
-                                            </tr>
-                                        </form>
+                                            </form>
                                     </tr>
                                 </tbody>
                                 <tr>

@@ -4,17 +4,21 @@ body {
     font-size: 16px;
 }
 
-.titulo {
+html {
+    scroll-behavior: smooth;
+}
+
+p, li {
+    text-align: justify;
+}
+
+.titulo, strong, th {
     color: #9b431f;
 }
 
 hr {
     height: 4px;
     background-color: #9b431f;   
-}
-
-strong {
-    color: #9b431f;
 }
 
 section {
@@ -37,9 +41,15 @@ section h2 {
     width: 100%;
 }
 
-.nome-data-user {
-    padding-left: 8px;
-    width: 45%;
+.user-input {
+    padding-block: 8px;
+}
+
+.nome-user {
+    width: 50%;
+}
+.nome-input {
+    width: 89%;
 }
 
 .endereco-input {
@@ -49,17 +59,11 @@ section h2 {
 .endereco-barra {
     width: 85%;
 }
-.nome-input {
-    width: 70%;
-}
 
 .opcao-tamanho span {
     padding: 10px;
 }
 
-th {
-    color: #9b431f;
-}
 
 .div-tabela-tamanho {
     border: 1 px #9b431f;
@@ -83,11 +87,11 @@ th {
 }
 
 .tabela-tamanho thead th{
-padding: 8px;
+    padding: 8px;
 }
 
 .tabela-tamanho tbody tr{
-padding: 12px;
+    padding: 12px;
 }
 
 input {
@@ -95,15 +99,18 @@ input {
     font-family: 'Montserrat';
     padding-left: 10px;
 }
+.foto-vanessa {
+    max-width:420px;
+}
 
 .foto-sobre-mim {
     width: 30%;
     padding-left: 16px;
-    padding-top: 24px;
 }
 .texto-sobre-mim {
     display: flex;
     text-align: left;
+    padding-right: 24px;
 }
 
 .tipo-pagamento {
@@ -126,7 +133,6 @@ input {
 img{
     border-radius: 10px;
 }
-
 
 button {
     font-family: 'Montserrat';
@@ -192,19 +198,9 @@ a:hover {
     text-align: center;
 }
 
-.emilia h2{
+.emilia h2, .emilia h3, .tr-ametista{
     text-align: center;
     color: #9b431f;
-}
-
-.emilia h3{
-    text-align: center;
-    color: #9b431f;
-}
-
-.tr-ametista{
-    text-align: center;
-    color: #9b431f; 
 }
 .hr-ametista {
     height: 1px;
@@ -233,7 +229,6 @@ a:hover {
     font-weight: bold;
 }
 
-
 .menu {
     width: 100%;
 }
@@ -248,8 +243,19 @@ a:hover {
     text-decoration: underline;
 }
 
-.conteudo {
-    
+.vann-store{
+    font-family: "Allura", cursive;
+    font-size: 28px;
+    color: #f4e9e0;
+    display: inline-block;
+    width: 30%;
+    position: absolute;
+}
+
+.vann-store h1 {
+    text-align: left;
+    padding-left: 24px;
+}
+.conteudo { 
     padding-top: 48px;
-    /* position: static; */
 }
