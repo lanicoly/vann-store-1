@@ -1,7 +1,7 @@
 body {
     background-color: #f4e9e0;
     font-family: 'Montserrat';
-    font-size: 16px;
+    font-size: 14px;
 }
 
 html {
@@ -12,13 +12,39 @@ p, li {
     text-align: justify;
 }
 
-.titulo, strong, th {
+.titulo, .titulo-colecao, strong, th {
     color: #9b431f;
+}
+
+h5 {
+    font-weight: 500;
+    color: #833111;
 }
 
 hr {
     height: 4px;
-    background-color: #9b431f;   
+    background-color: #9b431f;
+}
+
+.titulo-colecao {
+    text-align: center;
+    font-weight: 700;
+}
+
+.carousel {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.carousel img {
+    height: 250px;
+    width: 250px;
+    margin: 24px;
+}
+
+.roupas {
+    background-color: #e9c9b3;
 }
 
 section {
@@ -27,6 +53,7 @@ section {
     margin: auto;
     width: 50%;
     padding-bottom: 20px;
+    padding-top: 56px;
 }
 
 section h2 {
@@ -48,6 +75,7 @@ section h2 {
 .nome-user {
     width: 50%;
 }
+
 .nome-input {
     width: 89%;
 }
@@ -86,11 +114,11 @@ section h2 {
     padding: 4px;
 }
 
-.tabela-tamanho thead th{
+.tabela-tamanho thead th {
     padding: 8px;
 }
 
-.tabela-tamanho tbody tr{
+.tabela-tamanho tbody tr {
     padding: 12px;
 }
 
@@ -99,18 +127,21 @@ input {
     font-family: 'Montserrat';
     padding-left: 10px;
 }
+
 .foto-vanessa {
-    max-width:420px;
+    max-width: 380px;
 }
 
 .foto-sobre-mim {
-    width: 30%;
-    padding-left: 16px;
+    width: 28%;
+    padding-left: 32px;
+    padding-top: 24px;
 }
+
 .texto-sobre-mim {
     display: flex;
     text-align: left;
-    padding-right: 24px;
+    padding-right: 32px;
 }
 
 .tipo-pagamento {
@@ -119,18 +150,14 @@ input {
 
 .fim-pagina {
     text-align: center;
+    font-weight: 200;
 }
 
 .fim-pagina hr {
     height: 1px;
 }
 
-.foto{
-    width: 210px;
-    height: 210px;
-}
-
-img{
+img {
     border-radius: 10px;
 }
 
@@ -142,7 +169,6 @@ button {
     margin: 10px;
     border-radius: 8px;
     border: none;
-    font-weight: bold;
     color: white;
 }
 
@@ -154,6 +180,10 @@ button {
     background-color: #DC0505;
 }
 
+button:hover {
+    outline: 2px solid #833111;
+}
+
 a {
     color: white;
     text-decoration: none;
@@ -163,55 +193,13 @@ a:hover {
     text-decoration: underline;
 }
 
+button a:hover {
+    text-decoration: none;
+}
+
 .botao {
     display: flex;
     justify-content: center;
-}
-
-.tabela-emilia1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-bottom : .5em;
-    table-layout: fixed;
-    text-align: center;
-}
-
-.tabela-emilia2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-bottom : .5em;
-    table-layout: fixed;
-    text-align: center;
-}
-
-.tabela-emilia3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-bottom : .5em;
-    table-layout: fixed;
-    text-align: center;
-}
-
-.emilia h2, .emilia h3, .tr-ametista{
-    text-align: center;
-    color: #9b431f;
-}
-.hr-ametista {
-    height: 1px;
-}
-
-.hr-telha {
-    height: 1px;
-}
-
-.hr-collection {
-    height: 1px;
 }
 
 .nav-bar {
@@ -232,7 +220,8 @@ a:hover {
 .menu {
     width: 100%;
 }
-.menu a{
+
+.menu a {
     padding: 24px;
     justify-content: center;
     display: inline-block;
@@ -243,7 +232,7 @@ a:hover {
     text-decoration: underline;
 }
 
-.vann-store{
+.vann-store {
     font-family: "Allura", cursive;
     font-size: 28px;
     color: #f4e9e0;
@@ -254,8 +243,9 @@ a:hover {
 
 .vann-store h1 {
     text-align: left;
-    padding-left: 24px;
+    padding-left: 32px;
 }
-.conteudo { 
+
+.conteudo {
     padding-top: 48px;
 }
