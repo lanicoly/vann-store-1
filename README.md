@@ -20,7 +20,7 @@ Acesse o arquivo .zip do código aqui: https://drive.google.com/file/d/1OsQ82hTo
 Esse é só o começo! 🌟💪
 
 > [!NOTE]
-> Prazo para entrega do site otimizado e com interatividade: 04/09/2024
+> Prazo para entrega do site otimizado e com interatividade: 09/04/2024
 
 <br>
 
