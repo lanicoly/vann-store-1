@@ -12,7 +12,8 @@ Acesse o arquivo .zip do código aqui: https://drive.google.com/file/d/1OsQ82hTo
  <ul>
    <li>Emilia Nunes</li>
    <li>Sarah Ellen</li>
-  <li>Laís Nicoly</li>
+  <li>Laís Nicoly</li
+  <li>Priscila Freitas</li>
  </ul>
 
 <hr>
