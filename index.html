@@ -4,43 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- adicionando fonte Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+
+    <!-- adicionando fonte Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- linkando o css -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="Vann_Store.css">
+
+    <!-- adicionando o ícone da página direto da pasta "images" que está no mesmo caminho do arquivo do projeto -->
     <link rel="shortcut icon" href="images/foto-site-vanessa.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css" />
+
+    <!-- importando o css do slick carousel para estilizar o carrossel (pontinhos, setinhas, etc) -->
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css" />
 
+    <!-- titulo que vai aparecer no navegador -->
     <title>Vann Store</title>
 </head>
 
 <body>
+
+    <!-- criando o menu fixo do topo da página, nele tem o nome do site e os links navegáveis no próprio html -->
     <nav class="nav-bar">
         <span class="vann-store">
             <h1>Vann Store</h1>
         </span>
         <span class="menu">
+            <!-- essas "#" no href servem para eu navegar, ao clicar nelas, dentro da página para onde está o id com seus respectivos nomes -->
             <a href="#sobre-mim">Sobre mim</a>
             <a href="#colecao">Coleção</a>
             <a href="#compra">Compra</a>
         </span>
     </nav>
+
+    <!-- foi criado uma div "conteudo" abrigando basicamente o restante do body para afastar o resto do conteudo da página do espaço do menu no css. Como o menu é fixo (sempre está presente mesmo rolando a página), o conteudo acabava indo para trás dele no incício da página -->
     <div class="conteudo" id="sobre-mim">
-        <div class="sarah">
-            <table class="table-sarah">
+        <!-- aqui foi usado uma tabela para organizar a foto da vanessa ao lado do texto sobre ela quando estávamos iniciando nosso aprendizado, assim precisamos refazer essa parte sem usar a tabela para obter esse efeito -->
+            <table>
                 <tr>
                     <div class="conteudo-sobre-mim">
-                        <td class="foto-sobre-mim"><img class="foto-vanessa" src="images/foto-vanessa.jpg"
-                                alt="foto-vanessa"></td>
+                        <!-- essas duas "td" são as duas colunas da linha "tr" -->
+                        <td class="foto-sobre-mim"><img class="foto-vanessa" src="images/foto-vanessa.jpg" alt="foto-vanessa"></td>
                         <td class="texto-sobre-mim">
                             <ul>
                                 <h2 class="titulo"> Sobre mim: </h2>
@@ -51,9 +68,11 @@
                                     <strong>fotografia</strong>, capturando a beleza ao meu redor. Explorar
                                     <strong>experiências gastronômicas</strong> é uma das minhas paixões, adoro
                                     experimentar sabores e texturas que despertam os sentidos. Estou sempre aberta a
-                                    novas aventuras e descobertas!</p>
+                                    novas aventuras e descobertas!
+                                </p>
                                 <h2 class="titulo">Graduada em Análise e Desenvolvimento de Sistemas
-                                    <strong>(IFPI)</strong></h2>
+                                    <strong>(IFPI)</strong>
+                                </h2>
                                 <li>Especialização em Docência do Ensino Superior <strong>(FAITEH)</strong>
                                 <li> Mestrado em Ciência da Computação <strong>(UECE)</strong>
                                 <li> Como orientadora de projetos de <strong>engenharia de software</strong> na área de
@@ -61,17 +80,18 @@
                                     resolução de problemas. Cada projeto representa uma oportunidade única para aplicar
                                     conhecimentos avançados, inspirar equipes e alcançar soluções de ponta.
                                     <h2 class="titulo">Criação da loja</h2>
-                                    <p id="colecao"> Em fevereiro de 2023 decidi criar a <strong>Vann Store</strong>, loja voltada
+                                    <p id="colecao"> Em fevereiro de 2023 decidi criar a <strong>Vann Store</strong>,
+                                        loja voltada
                                         para o público feminino, com o objetivo de oferecer produtos de matéria-prima de
                                         qualidade, para enfatizar o valor da mulher elegante e clássica em diversos
                                         momentos do seu dia!
                             </ul>
                         </td>
-                    </div>
                 </tr>
             </table>
         </div>
         <br>
+        <!-- essa foi a única parte que usamos o javascript. pegamos uma biblioteca na internet pois nosso conhecimento era quase nulo em js basicamente -->
         <div class="roupas">
             <br>
             <h2 class="titulo-colecao">Coleção de Roupas</h2>
@@ -83,36 +103,44 @@
                 <div> <img src="images/close2.jpg" alt="look5" /> </div>
                 <div> <img src="images/close6.jpg" alt="look6" /> </div>
             </div>
-            
+
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"></script>
             <script>
+                // para usar essa função da biblioteca importada, usamos a classe "carousel" e configuramos com base no jeito que a gente queria:
                 $(document).ready(function () {
                     $('.carousel').slick({
+                        // esse autoplay é para o carrossel passar para o lado sozinho, sem precisar das setas necessariamente
                         autoplay: false,
+                        // esses slides to show e slides to scroll são as imagens que queremos que sejam exibidas e a quantidade de pontinhos que vão indicar quantas páginas precisam ser roladas para exibir tudo
                         slidesToShow: 2,
                         slidesToScroll: 2,
+                        // velocidade da animação de rolagem
                         speed: 500,
+                        // se os pontinhos embaixo do carrossel aparecem ou não
                         dots: true,
                     })
                 });
-                </script>
-                <div id="compra"></div>
-
-               <br>
+            </script>
+            <!-- div feita para dar colocar o id da navegação do menu, colocando esse id em outro lugar, fica cortado por causa do menu fixo -->
+            <div id="compra"></div>
+        <br>
         </div>
-        <div>
+            <!-- seção de compras -->
             <section>
                 <h2 class="titulo">Informações de Compra</h2>
+                <!-- novamente uma tabela para organização, necessário otimizar e retirar por se tratar de uma gambiarra e deixar o css com informações demais. não foque nas tags de tabela-->
                 <table class="dados-user">
                     <tbody>
                         <hr class="hr-compra">
                         <h3 class="titulo">Sobre o cliente</h3>
                         <tr>
+                            <!-- formulário de compras -->
                             <form>
                         <tr>
                         <tr>
+                            <!-- essas classes todas é somente para estilizar detalhes pequenos -->
                             <td class="user-input">
                                 <span>
                                     <label for="nome">Nome</label>
@@ -139,6 +167,7 @@
                         </tr>
                     </tbody>
                     <tr>
+                        <!-- foi criado outro form para as informações do item a ser comprado, não sei o porquê na verdade -->
                         <form>
                             <table>
                                 <br>
@@ -152,6 +181,7 @@
                                 </tr>
                                 <br>
                                 <tr>
+                                    <!-- escolha do tamanho da peça -->
                                     <div class="opcao-tamanho">
                                         <span>
                                             <input type="radio" id="tamanho-1" name="tamanho-peca">
@@ -182,6 +212,7 @@
                                         <input type="color" id="cor-roupa">
                                     </div>
                                     <br>
+                                    <!-- tabela de tamanhos das roupas com base nas medidas equivalentes -->
                                     <div class="div-tabela-tamanho">
                                         <table class="tabela-tamanho">
                                             <thead>
@@ -238,6 +269,7 @@
                     </tr>
                     <hr class="hr-compra">
                     <tr>
+                        <!-- formulário de pagamento -->
                         <form>
                             <h3 class="titulo">Forma de Pagamento</h3>
                             <div class="escolha-pagamento">
@@ -263,15 +295,14 @@
                             </div>
                         </form>
                     </tr>
+                </table>
+            </section>
+        <hr>
+
+        <!-- fim da página -->
+        <div class="fim-pagina">
+            <h5>Todos os direitos reservados à Emilia Nunes, Laís Nicoly e Sarah Ellen</h5>
         </div>
-        </table>
-        </section>
-    </div>
-    <hr>
-    <div class="fim-pagina">
-        <h5>Todos os direitos reservados à Emilia Nunes, Laís Nicoly e Sarah Ellen</h5>
-    </div>
     </div>
 </body>
-
 </html>

@@ -13,6 +13,7 @@ Acesse o arquivo .zip do código aqui: https://drive.google.com/file/d/1OsQ82hTo
    <li>Emilia Nunes</li>
    <li>Sarah Ellen</li>
   <li>Laís Nicoly</li>
+  <li>Priscila Freitas</li>
  </ul>
 
 <hr>
@@ -20,7 +21,7 @@ Acesse o arquivo .zip do código aqui: https://drive.google.com/file/d/1OsQ82hTo
 Esse é só o começo! 🌟💪
 
 > [!NOTE]
-> Prazo para entrega do site otimizado e com interatividade: 09/04/2024
+> Prazo para entrega do site otimizado e com interatividade: 07/05/2024
 
 <br>
 
