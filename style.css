@@ -31,20 +31,67 @@ hr {
     font-weight: 700;
 }
 
-.carousel {
-    width: 600px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.carousel img {
-    height: 250px;
-    width: 250px;
-    margin: 24px;
-}
-
 .roupas {
-    background-color: #e9c9b3;
+    margin: 0 auto;
+    width: 200px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.carousel {
+    width: 800px;
+    height: 400px;
+    display: flex;
+}
+
+.carousel input{
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+}
+
+.slide img{
+    width: 200px;
+    height: 250px;
+}
+
+.manual-navegacao{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .05s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+.manual-btn:hover{
+    background-color: white;
 }
 
 section {
@@ -155,10 +202,6 @@ input {
 
 .fim-pagina hr {
     height: 1px;
-}
-
-img {
-    border-radius: 10px;
 }
 
 button {
