@@ -32,6 +32,8 @@ hr {
 }
 
 .roupas {
+    position: relative;
+    /* margin-top: 68px; */
     margin: 0 auto;
     width: 50%;
     height: 100%;
@@ -318,5 +320,5 @@ button a:hover {
 }
 
 .conteudo {
-    padding-top: 48px;
+    padding-top: 64px;
 }

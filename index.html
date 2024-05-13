@@ -50,8 +50,47 @@
         </span>
     </nav>
 
+    <div class="conteudo" id="sobre-mim"></div>
+
+    <div class="roupas">
+        <div class="carousel">
+            <!-- radio buttons -->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <!-- fim radio buttons -->
+
+            <!-- imagens -->
+            <span class="gira_gira">
+            <div class="slide first"> <img src="images/close1.jpg" alt="look1" /> </div>
+            <div class="slide"> <img src="images/close3.jpg" alt="look2" /> </div>
+            <div class="slide"> <img src="images/close4.jpg" alt="look3" /> </div>
+            <div class="slide"> <img src="images/close5.jpg" alt="look4" /> </div>
+            <div class="slide"> <img src="images/close2.jpg" alt="look5" /> </div>
+            <div class="slide"> <img src="images/close6.jpg" alt="look6" /> </div>
+            </span>
+            <!-- fim imagens -->
+
+            <!-- navegação -->
+            <div class="navegacao">
+                <div class="btn1"></div>
+                <div class="btn2"></div>
+                <div class="btn3"></div>
+            </div>
+            <!-- fim nvegação -->
+        </div>
+
+        <div class="manual-navegacao">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+        </div>
+
+    <br>
+    </div>
+
+
     <!-- foi criado uma div "conteudo" abrigando basicamente o restante do body para afastar o resto do conteudo da página do espaço do menu no css. Como o menu é fixo (sempre está presente mesmo rolando a página), o conteudo acabava indo para trás dele no incício da página -->
-    <div class="conteudo" id="sobre-mim">
         <!-- aqui foi usado uma tabela para organizar a foto da vanessa ao lado do texto sobre ela quando estávamos iniciando nosso aprendizado, assim precisamos refazer essa parte sem usar a tabela para obter esse efeito -->
             <table>
                 <tr>
@@ -92,45 +131,7 @@
         </div>
         <br>
         <!-- essa foi a única parte que usamos o javascript. pegamos uma biblioteca na internet pois nosso conhecimento era quase nulo em js basicamente -->
-        <div class="roupas">
-            <br>
-            <h2 class="titulo-colecao">Coleção de Roupas</h2>
-            <div class="carousel">
-                <!-- radio buttons -->
-                <input type="radio" name="radio-btn" id="radio1">
-                <input type="radio" name="radio-btn" id="radio2">
-                <input type="radio" name="radio-btn" id="radio3">
-                <!-- fim radio buttons -->
-
-                <!-- imagens -->
-                <span class="gira_gira">
-                <div class="slide first"> <img src="images/close1.jpg" alt="look1" /> </div>
-                <div class="slide"> <img src="images/close3.jpg" alt="look2" /> </div>
-                <div class="slide"> <img src="images/close4.jpg" alt="look3" /> </div>
-                <div class="slide"> <img src="images/close5.jpg" alt="look4" /> </div>
-                <div class="slide"> <img src="images/close2.jpg" alt="look5" /> </div>
-                <div class="slide"> <img src="images/close6.jpg" alt="look6" /> </div>
-                </span>
-                <!-- fim imagens -->
-
-                <!-- navegação -->
-                <div class="navegacao">
-                    <div class="btn1"></div>
-                    <div class="btn2"></div>
-                    <div class="btn3"></div>
-                </div>
-                <!-- fim nvegação -->
-            </div>
-
-            <div class="manual-navegacao">
-                <label for="radio1" class="manual-btn"></label>
-                <label for="radio2" class="manual-btn"></label>
-                <label for="radio3" class="manual-btn"></label>
-            </div>
-
-        <br>
-        </div>
-
+        
         <div id="compra"></div>
             <!-- seção de compras -->
             <section>
