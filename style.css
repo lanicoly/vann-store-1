@@ -33,14 +33,14 @@ hr {
 
 .roupas {
     margin: 0 auto;
-    width: 200px;
-    height: 400px;
+    width: 50%;
+    height: 100%;
     overflow: hidden;
 }
 
 .carousel {
-    width: 800px;
-    height: 400px;
+    width: 600%;
+    height: 100%;
     display: flex;
 }
 
@@ -48,14 +48,42 @@ hr {
     display: none;
 }
 
-.slide {
-    width: 25%;
+.carrossel{
     position: relative;
 }
 
+.slide {
+    width: 100%;
+    position: relative;
+}
+
+.gira_gira{
+    width: 600%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    animation-name: slideshow;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+    animation-duration: 10s;
+    animation-direction: alternate;
+}
+
+@keyframes slideshow { 
+    0% { margin-left: 0; } 
+    15% { margin-left: -20%; } 
+    30% { margin-left: -40%; }  
+    45% { margin-left: -60%; }  
+    60% { margin-left: -80%; }
+    75% {margin-left: -100%;}
+    90% {margin-left: -120%;}
+    100% {margin-left: -140%;}
+}
+
 .slide img{
-    width: 200px;
-    height: 250px;
+    width: 100%;
+    height: 500px;
 }
 
 .manual-navegacao{
@@ -67,7 +95,7 @@ hr {
 }
 
 .manual-btn{
-    border: 2px solid white;
+    border: 2px solid black;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -78,15 +106,15 @@ hr {
     margin-right: 40px;
 }
 
-#radio1:checked ~ .first{
+#radio1:checked ~ .gira_gira{
     margin-left: 0;
 }
 
-#radio2:checked ~ .first{
+#radio2:checked ~ .gira_gira{
     margin-left: -25%;
 }
 
-#radio3:checked ~ .first{
+#radio3:checked ~ .gira_gira{
     margin-left: -50%;
 }
 
