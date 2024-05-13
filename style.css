@@ -1,3 +1,13 @@
+:root {
+    --cor-titulo-laranja-escuro: #833111;
+    --cor-titulo-geral: #9b431f;
+    --peso-titulo:700;
+    --cor-botao-verde: #16C34D;
+    --cor-botao-vermelho: #DC0505;
+    --cor-titulo-bege: #f4e9e0;
+
+}
+
 body {
     background-color: #f4e9e0;
     font-family: 'Montserrat';
@@ -12,24 +22,19 @@ p, li {
     text-align: justify;
 }
 
-.titulo, .titulo-colecao, strong, th {
-    color: #9b431f;
+.titulo, .titulo-colecao, strong, th, .looks-disponiveis h2, hr {
+    color: var(--cor-titulo-geral);
 }
 
 h5 {
     font-weight: 500;
-    color: #833111;
+    color: var(--cor-titulo-laranja-escuro);
 }
 
 hr {
     height: 4px;
-    background-color: #9b431f;
 }
 
-.titulo-colecao {
-    text-align: center;
-    font-weight: 700;
-}
 
 .carousel {
     width: 600px;
@@ -56,76 +61,8 @@ section {
     padding-top: 56px;
 }
 
-section h2 {
+section h2, .titulo-colecao {
     text-align: center;
-}
-
-.hr-compra {
-    height: 1px;
-}
-
-.dados-user {
-    width: 100%;
-}
-
-.user-input {
-    padding-block: 8px;
-}
-
-.nome-user {
-    width: 50%;
-}
-
-.nome-input {
-    width: 89%;
-}
-
-.endereco-input {
-    padding-top: 10px;
-}
-
-.endereco-barra {
-    width: 85%;
-}
-
-.opcao-tamanho span {
-    padding: 10px;
-}
-
-
-.div-tabela-tamanho {
-    border: 1 px #9b431f;
-}
-
-.tabela-tamanho {
-    font-size: 14px;
-    border: 2px solid #9b431f;
-    border-radius: 8px;
-    padding: 4px;
-    background-color: white;
-}
-
-.tabela-tamanho td {
-    padding: 4px;
-    text-align: center;
-}
-
-.tabela-tamanho th {
-    padding: 4px;
-}
-
-.tabela-tamanho thead th {
-    padding: 8px;
-}
-
-.tabela-tamanho tbody tr {
-    padding: 12px;
-}
-
-input {
-    border-radius: 4px;
-    font-family: 'Montserrat';
-    padding-left: 10px;
 }
 
 .foto-vanessa {
@@ -144,9 +81,6 @@ input {
     padding-right: 32px;
 }
 
-.tipo-pagamento {
-    padding-top: 10px;
-}
 
 .fim-pagina {
     text-align: center;
@@ -172,16 +106,9 @@ button {
     color: white;
 }
 
-.botao-finalizar {
-    background-color: #16C34D;
-}
-
-.botao-cancelar {
-    background-color: #DC0505;
-}
 
 button:hover {
-    outline: 2px solid #833111;
+    outline: 2px solid var(--cor-titulo-laranja-escuro);
 }
 
 a {
@@ -193,10 +120,6 @@ a:hover {
     text-decoration: underline;
 }
 
-button a:hover {
-    text-decoration: none;
-}
-
 .botao {
     display: flex;
     justify-content: center;
@@ -205,8 +128,8 @@ button a:hover {
 .nav-bar {
     height: 64px;
     width: 100%;
-    background-color: #833111;
-    color: #f4e9e0;
+    background-color: var(--cor-titulo-laranja-escuro);
+    color: var(--cor-titulo-bege);
     position: fixed;
     display: flex;
     z-index: 1;
@@ -235,7 +158,7 @@ button a:hover {
 .vann-store {
     font-family: "Allura", cursive;
     font-size: 28px;
-    color: #f4e9e0;
+    color: var(--cor-titulo-bege);
     display: inline-block;
     width: 30%;
     position: absolute;
@@ -248,4 +171,119 @@ button a:hover {
 
 .conteudo {
     padding-top: 48px;
+}
+
+.all-cards {
+    display: flex;
+    justify-content: center;
+    gap: 1vh 5vw;
+    flex-flow: row wrap;
+    margin: 0 auto;
+    align-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px; 
+    height: auto; 
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: white;
+    
+}
+
+.desconto {
+    font-weight: 400;
+    text-decoration:line-through;
+    font-size: 12px;
+    margin: 8px 0px 0px 0px;
+}
+
+.valor {
+    font-weight: 700;
+    font-size: 16px;
+    margin: 8px 0px 0px 0px;
+    color: var(--cor-titulo-laranja-escuro);
+}
+
+.parcela {
+    font-weight: 800;
+    font-size: 10px;
+    margin: 8px 0px 16px 0px;
+}
+
+div.card {
+    margin: 10px 0px;
+}
+
+
+.card h4 {
+    color: var(--cor-titulo-laranja-escuro);
+    margin: 0px;
+    font-size: 16px;
+}
+
+.card img {
+    margin: 0px;
+    top: 0;
+    border-radius: 10px 10px 0% 0%;
+}
+
+.card:hover {
+    box-shadow: var(--cor-titulo-laranja-escuro);
+}
+
+.looks-disponiveis {
+    /* display: flex; */
+    justify-content: center;
+    padding: 16px 0px;
+    text-align: center;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.looks-disponiveis h2 {
+    font-size: 24px;
+    padding-bottom: 20px;
+}
+
+
+.botao-compra {
+    min-width: 70%;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 12px;
+    background-color: #512454;
+    color: white;
+    font-family: "Poppins", Helvetica;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.botao-compra:hover {
+    background-color: #87138f;
+    text-decoration: none;
+    transform: scale(1.06);
+    transition: all .2s ease-in-out;
+}
+
+
+.botao-compra a {
+    color: white;
+}
+.botao-compra a:hover {
+   color: white;
+}
+
+.venda-roupa {
+    width: 100%;
+    
+}
+
+.venda-roupa img{
+    float: left;
+    padding: 0px 40px;
+    border-radius: 20px;
 }
