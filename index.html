@@ -96,37 +96,40 @@
             <br>
             <h2 class="titulo-colecao">Coleção de Roupas</h2>
             <div class="carousel">
-                <div> <img src="images/close1.jpg" alt="look1" /> </div>
-                <div> <img src="images/close3.jpg" alt="look2" /> </div>
-                <div> <img src="images/close4.jpg" alt="look3" /> </div>
-                <div> <img src="images/close5.jpg" alt="look4" /> </div>
-                <div> <img src="images/close2.jpg" alt="look5" /> </div>
-                <div> <img src="images/close6.jpg" alt="look6" /> </div>
+                <!-- radio buttons -->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <!-- fim radio buttons -->
+
+                <!-- imagens -->
+                <div class="slide first"> <img src="images/close1.jpg" alt="look1" /> </div>
+                <div class="slide"> <img src="images/close3.jpg" alt="look2" /> </div>
+                <div class="slide"> <img src="images/close4.jpg" alt="look3" /> </div>
+                <div class="slide"> <img src="images/close5.jpg" alt="look4" /> </div>
+                <div class="slide"> <img src="images/close2.jpg" alt="look5" /> </div>
+                <div class="slide"> <img src="images/close6.jpg" alt="look6" /> </div>
+                <!-- fim imagens -->
+
+                <!-- navegação -->
+                <div class="navegacao">
+                    <div class="btn1"></div>
+                    <div class="btn2"></div>
+                    <div class="btn3"></div>
+                </div>
+                <!-- fim nvegação -->
             </div>
 
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"></script>
-            <script>
-                // para usar essa função da biblioteca importada, usamos a classe "carousel" e configuramos com base no jeito que a gente queria:
-                $(document).ready(function () {
-                    $('.carousel').slick({
-                        // esse autoplay é para o carrossel passar para o lado sozinho, sem precisar das setas necessariamente
-                        autoplay: false,
-                        // esses slides to show e slides to scroll são as imagens que queremos que sejam exibidas e a quantidade de pontinhos que vão indicar quantas páginas precisam ser roladas para exibir tudo
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        // velocidade da animação de rolagem
-                        speed: 500,
-                        // se os pontinhos embaixo do carrossel aparecem ou não
-                        dots: true,
-                    })
-                });
-            </script>
-            <!-- div feita para dar colocar o id da navegação do menu, colocando esse id em outro lugar, fica cortado por causa do menu fixo -->
-            <div id="compra"></div>
+            <div class="manual-navegacao">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+
         <br>
         </div>
+
+        <div id="compra"></div>
             <!-- seção de compras -->
             <section>
                 <h2 class="titulo">Informações de Compra</h2>
