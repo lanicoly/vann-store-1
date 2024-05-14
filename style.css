@@ -2,6 +2,8 @@ body {
     background-color: #f4e9e0;
     font-family: 'Montserrat';
     font-size: 14px;
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -42,6 +44,37 @@ hr {
     width: 250px;
     margin: 24px;
 }
+
+.container-services{
+    height:90px;
+    width: 100%;
+    background-color: #e9c9b3;
+    padding-top:75px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+
+.service{
+    flex: 1;
+    text-align: center;
+    
+}
+  
+.services h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-right: 10px; 
+}
+  
+.service p {
+    font-size: 14px;
+    text-align: center;
+    
+}
+
 
 .roupas {
     background-color: #e9c9b3;
@@ -247,7 +280,7 @@ button a:hover {
 }
 
 .conteudo {
-    padding-top: 48px;
+    padding-top: 6px;
 }
 
 .icones{
