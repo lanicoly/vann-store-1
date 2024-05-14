@@ -71,6 +71,14 @@ p, li {
     color: var(--cor-titulo-geral);
 }
 
+.titulo {
+    margin:10px 0px;
+}
+
+.pagamento {
+    padding-top: 10px;
+}
+
 .venda-roupa {
     display: flex;
     justify-content: center;
@@ -100,7 +108,7 @@ p, li {
 
 .hr-compra {
     background-color: var(--cor-titulo-laranja-escuro);
-    height: .5px;
+    height: 1px;
 }
 
 #qtd {
@@ -139,7 +147,7 @@ p, li {
     margin: 8px 0px 4px 0px;
 }
 
-label {
+label, .tipo-pagamento, option {
     font-family: "Montserrat", "Poppins", Roboto;
 }
 
@@ -151,13 +159,13 @@ input {
 .opcao-tamanho {
     display: flex;
     gap:8px;
-    padding: 10px 0px 20px 0px;
+    padding: 10px 0px;
     width: 100%;
 }
 
 input[type="radio"] {
     display: none;
-  }
+}
   
   input[type="radio"] + label {
     display: inline-block;
@@ -239,17 +247,61 @@ input[type="radio"] {
 
 .tipo-pagamento {
     padding-top: 10px;
+    
+}
+
+.escolha-pagamento {
+    font-weight: 500;
+}
+
+.botao {
+    gap: 20px;
+    margin-top: 20px;
 }
 
 .botao-finalizar {
+    min-width: 30%;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-family: "Poppins", Helvetica;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
     background-color: var(--cor-botao-verde);
 }
 
+.botao-finalizar:hover {
+    background-color: #009e54;
+    text-decoration: none;
+    transform: scale(1.06);
+    transition: all .2s ease-in-out;
+}
+
 .botao-cancelar {
+    min-width: 30%;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-family: "Poppins", Helvetica;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
     background-color: var(--cor-botao-vermelho);
 }
 
-button {
+.botao-cancelar:hover {
+    background-color: #9c0070;
+    text-decoration: none;
+    transform: scale(1.06);
+    transition: all .2s ease-in-out;
+}
+
+/* button {
     font-family: 'Montserrat';
     font-size: 16px;
     font-weight: bold;
@@ -262,7 +314,7 @@ button {
 
 button:hover {
     outline: 2px solid var(--cor-titulo-laranja-escuro);
-}
+} */
 
 a {
     color: white;
