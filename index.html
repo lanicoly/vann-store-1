@@ -30,8 +30,10 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css" />
-
-    <!-- titulo que vai aparecer no navegador -->
+    <!--Importando bibliotecas para os ícones da barra de navegação e para o container de serviços-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    
+        <!-- titulo que vai aparecer no navegador -->
     <title>Vann Store</title>
 </head>
 
@@ -45,13 +47,37 @@
         <span class="menu">
             <!-- essas "#" no href servem para eu navegar, ao clicar nelas, dentro da página para onde está o id com seus respectivos nomes -->
             <a href="#sobre-mim">Sobre mim</a>
-            <a href="#colecao">Coleções Disponíveis</a>
-            <!-- <a href="#compra">Compra</a> -->
+            <a href="#colecao">Coleção</a>
+            <a href="#compra">Compra</a>
         </span>
+        <div class="icones" >
+            <a href="#">
+              <i class="bi bi-search"></i>
+            </a>
+            <a href="#">
+              <i class="bi bi-cart"></i>
+            </a>
+            <a href="#">
+                <i class="bi bi-person-heart"></i>
+            </a>
+        </div>          
     </nav>
-
     <!-- foi criado uma div "conteudo" abrigando basicamente o restante do body para afastar o resto do conteudo da página do espaço do menu no css. Como o menu é fixo (sempre está presente mesmo rolando a página), o conteudo acabava indo para trás dele no incício da página -->
     <div class="conteudo" id="sobre-mim">
+        <div class="container-services">
+            <div class="service">
+                <h3><i class="bi bi-truck"></i> ENTREGA GRÁTIS</h3>
+                <p>Entregamos em toda a cidade de Floriano-PI</p>
+            </div> 
+            <div class="service">
+                <h3><i class="bi bi-wallet2"></i> ATÉ 12 VEZES SEM JUROS</h3>
+                <p>Com todos os cartões de crédito</p>
+            </div>
+            <div class="service">
+                <h3><i class="bi bi-person-lock"></i> SITE SEGURO</h3>
+                <p>Protegemos seus dados</p>
+            </div>
+        </div>
         <!-- aqui foi usado uma tabela para organizar a foto da vanessa ao lado do texto sobre ela quando estávamos iniciando nosso aprendizado, assim precisamos refazer essa parte sem usar a tabela para obter esse efeito -->
         <table>
             <tr>

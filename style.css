@@ -12,6 +12,7 @@ body {
     background-color: #f4e9e0;
     font-family: 'Montserrat';
     font-size: 14px;
+    margin: 0px;
 }
 
 html {
@@ -33,6 +34,44 @@ h5 {
 
 hr {
     height: 4px;
+}
+
+.container-services{
+    height:90px;
+    width: 100%;
+    background-color: #e9c9b3;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    color:#833111;
+}
+
+.service{
+    flex: 1;
+    text-align: center;
+}
+  
+.services h2 {
+    font-size: 18px;
+    margin-bottom: 9px;
+    margin-right: 10px; 
+}
+  
+.service p {
+    font-size: 14px;
+    text-align: center;
+    margin-right: 10px; 
+    
+}
+
+.icones{
+    display: flex; 
+    gap: 17px; 
+    align-items: center; 
+    font-size: 17px; 
+    margin-right: 20px;
+
 }
 
 
@@ -171,7 +210,7 @@ a:hover {
 }
 
 .conteudo {
-    padding-top: 48px;
+    margin-top: 64px;
 }
 
 .all-cards {
