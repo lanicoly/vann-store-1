@@ -88,22 +88,6 @@ hr {
     height: 500px;
 }
 
-.manual-navegacao{
-    position: absolute;
-    width: 800px;
-    margin-top: -40px;
-    display: flex;
-    justify-content: center;
-}
-
-.manual-btn{
-    border: 2px solid black;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: .05s;
-}
-
 .manual-btn:not(:last-child){
     margin-right: 40px;
 }
