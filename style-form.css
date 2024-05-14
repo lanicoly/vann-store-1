@@ -1,0 +1,279 @@
+:root {
+    --cor-titulo-laranja-escuro: #833111;
+    --cor-titulo-geral: #9b431f;
+    --peso-titulo:700;
+    --cor-botao-verde: #16C34D;
+    --cor-botao-vermelho: #DC0505;
+    --cor-titulo-bege: #f4e9e0;
+}
+
+body {
+    background-color: #f4e9e0;
+    font-family: 'Montserrat';
+    font-size: 14px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.nav-bar {
+    height: 64px;
+    width: 100%;
+    background-color: var(--cor-titulo-laranja-escuro);
+    color: var(--cor-titulo-bege);
+    position: fixed;
+    display: flex;
+    z-index: 1;
+    text-align: center;
+    top: 0;
+    left: 0;
+    align-items: center;
+    font-weight: bold;
+}
+
+.vann-store {
+    font-family: "Allura", cursive;
+    font-size: 28px;
+    color: var(--cor-titulo-bege);
+    display: inline-block;
+    width: 30%;
+    position: absolute;
+}
+
+.vann-store h1 {
+    text-align: left;
+    padding-left: 32px;
+}
+
+.menu {
+    width: 100%;
+}
+
+.menu a {
+    padding: 24px;
+    justify-content: center;
+    display: inline-block;
+    align-items: center;
+}
+
+.menu a :hover {
+    text-decoration: underline;
+}
+
+
+p, li {
+    text-align: justify;
+}
+
+.titulo, strong, th, hr,.titulo-roupa {
+    color: var(--cor-titulo-geral);
+}
+
+.venda-roupa {
+    display: flex;
+    justify-content: center;
+    flex-wrap: row wrap;
+    padding-top: 40px;
+}
+
+.titulo-roupa {
+    color:#5d1e61;
+    text-align: center;
+    font-size: 28px;
+    font-family: "Poppins", cursive;
+    margin: 8px 0px
+}
+
+.frete {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    align-items: center;
+    font-weight: 500;
+}
+
+.frete i {
+    padding-top: 1px;
+}
+
+.hr-compra {
+    background-color: var(--cor-titulo-laranja-escuro);
+    height: .5px;
+}
+
+#qtd {
+    width: 20%;
+    border: var(--cor-titulo-laranja-escuro) solid 1px;
+}
+
+.quantidade {
+    padding: 10px 0px;
+    font-weight: 700;
+    color: var(--cor-titulo-laranja-escuro);
+}
+
+.look {
+    float: left;
+    padding: 8px 40px 20px 40px;
+}
+
+.desconto {
+    font-weight: 500;
+    text-decoration:line-through;
+    font-size: 18px;
+    margin: 0px 0px 0px 0px;
+}
+
+.valor {
+    font-weight: 700;
+    font-size: 36px;
+    margin: 4px 0px 0px 0px;
+    color: var(--cor-titulo-laranja-escuro);
+}
+
+.parcela {
+    font-weight: 700;
+    font-size: 14px;
+    margin: 8px 0px 4px 0px;
+}
+
+label {
+    font-family: "Montserrat", "Poppins", Roboto;
+}
+
+input {
+    border-radius: 4px;
+    font-family: 'Montserrat';
+    padding-left: 10px;
+}
+.opcao-tamanho {
+    display: flex;
+    gap:8px;
+    padding: 10px 0px 20px 0px;
+    width: 100%;
+}
+
+input[type="radio"] {
+    display: none;
+  }
+  
+  input[type="radio"] + label {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid rgb(178, 178, 178);
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Montserrat", "Poppins", Roboto;
+  }
+  
+  input[type="radio"]:hover + label {
+    background-color: #be7bc3;
+  }
+
+  input[type="radio"]:checked + label {
+    background-color: #5d1e61;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .compra-final {
+    display: flex;
+    justify-content: center;
+    /* padding-top: 10px; */
+  }
+
+  .botao-compra {
+    min-width: 30%;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 12px;
+    background-color: #512454;
+    color: white;
+    font-family: "Poppins", Helvetica;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+}
+
+.botao-compra:hover {
+    background-color: #87138f;
+    text-decoration: none;
+    transform: scale(1.06);
+    transition: all .2s ease-in-out;
+}
+
+
+
+.div-tabela-tamanho {
+    border: 1 px #9b431f;
+}
+
+.tabela-tamanho {
+    font-size: 14px;
+    border: 2px solid var(--cor-titulo-geral);
+    border-radius: 8px;
+    padding: 4px;
+    background-color: white;
+}
+
+.tabela-tamanho td {
+    padding: 4px;
+    text-align: center;
+}
+
+.tabela-tamanho th {
+    padding: 4px;
+}
+
+.tabela-tamanho thead th {
+    padding: 8px;
+}
+
+.tabela-tamanho tbody tr {
+    padding: 12px;
+}
+
+.tipo-pagamento {
+    padding-top: 10px;
+}
+
+.botao-finalizar {
+    background-color: var(--cor-botao-verde);
+}
+
+.botao-cancelar {
+    background-color: var(--cor-botao-vermelho);
+}
+
+button {
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+}
+
+button:hover {
+    outline: 2px solid var(--cor-titulo-laranja-escuro);
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.botao {
+    display: flex;
+    justify-content: center;
+}

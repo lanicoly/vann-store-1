@@ -1,231 +1,194 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+    <!-- adicionando fonte Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- adicionando fonte Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- linkando o css -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="Vann_Store.css">
+
+    <!-- adicionando o ícone da página direto da pasta "images" que está no mesmo caminho do arquivo do projeto -->
     <link rel="shortcut icon" href="images/foto-site-vanessa.ico" type="image/x-icon">
+
+    <!-- importando o css do slick carousel para estilizar o carrossel (pontinhos, setinhas, etc) -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css" />
+
+    <!-- titulo que vai aparecer no navegador -->
     <title>Vann Store</title>
 </head>
-<body>
-    <div class="titulo">
-        <h1 class="titulo">Vann Store</h1>
-        <hr>
-    </div>
-    <div class="sarah">
-        <table class="table-sarah">
-            <tr>
-                <td class="foto-sobre-mim"><img src="images/foto-vanessa.jpg" alt="foto-vanessa" width="400"></td>
-                <td class="texto-sobre-mim">
-                    <ul>
-                        <h2 class="titulo"> Sobre mim: </h2>
-                            <p>Sou de <strong>Floriano - PI</strong>, apaixonada por <strong>moda</strong> e sempre em busca das últimas tendências. Além disso, dedicar-me ao <strong>cuidado do corpo e da mente</strong> é essencial para mim, seja através de exercícios físicos ou momentos de relaxamento. Amo registrar momentos através da arte da <strong>fotografia</strong>, capturando a beleza ao meu redor. Explorar <strong>experiências gastronômicas</strong> é uma das minhas paixões, adoro experimentar sabores e texturas que despertam os sentidos. Estou sempre aberta a novas aventuras e descobertas!</p> 
-                        <h2 class="titulo">Graduada em Análise e Desenvolvimento de Sistemas <strong>(IFPI)</strong></h2>   
-                            <li>Especialização em Docência do Ensino Superior <strong>(FAITEH)</strong> 
-                            <li> Mestrado em Ciência da Computação <strong>(UECE)</strong> 
-                            <li> Como orientadora de projetos de <strong>engenharia de software</strong> na área de tecnologia, minha jornada é uma fusão empolgante de inovação, colaboração e resolução de problemas. Cada projeto representa uma oportunidade única para aplicar conhecimentos avançados, inspirar equipes e alcançar soluções de ponta.
-                        <h2 class="titulo">Criação da loja</h2>
-                            <li> Em fevereiro de 2023 decidi criar a <strong>Vann Store</strong>, loja voltada para o público feminino, com o objetivo de oferecer produtos de matéria-prima de qualidade, para enfatizar o valor da mulher elegante e clássica em diversos momentos do seu dia!
-                    </ul>
-                </td>
-            </tr>
-        </table>
-    </div>
 
-    <br>
-    <hr>
-    <br>
-    <div class="emilia">
-        <h2>Linha Classic</h2>
-        <h3>Ametista</h3><hr class="hr-ametista">
-        <table class="tabela-emilia1">
+<body>
+
+    <!-- criando o menu fixo do topo da página, nele tem o nome do site e os links navegáveis no próprio html -->
+    <nav class="nav-bar">
+        <span class="vann-store">
+            <h1>Vann Store</h1>
+        </span>
+        <span class="menu">
+            <!-- essas "#" no href servem para eu navegar, ao clicar nelas, dentro da página para onde está o id com seus respectivos nomes -->
+            <a href="#sobre-mim">Sobre mim</a>
+            <a href="#colecao">Coleções Disponíveis</a>
+            <!-- <a href="#compra">Compra</a> -->
+        </span>
+    </nav>
+
+    <!-- foi criado uma div "conteudo" abrigando basicamente o restante do body para afastar o resto do conteudo da página do espaço do menu no css. Como o menu é fixo (sempre está presente mesmo rolando a página), o conteudo acabava indo para trás dele no incício da página -->
+    <div class="conteudo" id="sobre-mim">
+        <!-- aqui foi usado uma tabela para organizar a foto da vanessa ao lado do texto sobre ela quando estávamos iniciando nosso aprendizado, assim precisamos refazer essa parte sem usar a tabela para obter esse efeito -->
+        <table>
             <tr>
-                <td><img src="images/close1.jpg" class="foto"></td>
-                <td><img src="images/close3.jpg" class="foto"></td>
-            </tr>
-        </table>
-        <h3>Telha</h3><hr class="hr-telha">
-        <table class="tabela-emilia2">
-            <tr>
-                <td><img src="images/close4.jpg" class="foto"></td>
-                <td><img src="images/close5.jpg" class="foto"></td>
-            </tr>
-        </table>
-        <h3>Collection</h3><hr class="hr-collection">
-        <table class="tabela-emilia3">
-            <tr>
-                <td><img src="images/close2.jpg" class="foto"></td>
-                <td><img src="images/close6.jpg" class="foto"></td>
+                <div class="conteudo-sobre-mim">
+                    <!-- essas duas "td" são as duas colunas da linha "tr" -->
+                    <td class="foto-sobre-mim"><img class="foto-vanessa" src="images/foto-vanessa.jpg"
+                            alt="foto-vanessa"></td>
+                    <td class="texto-sobre-mim">
+                        <ul>
+                            <h2 class="titulo"> Sobre mim: </h2>
+                            <p>Sou de <strong>Floriano - PI</strong>, apaixonada por <strong>moda</strong> e sempre
+                                em busca das últimas tendências. Além disso, dedicar-me ao <strong>cuidado do corpo
+                                    e da mente</strong> é essencial para mim, seja através de exercícios físicos ou
+                                momentos de relaxamento. Amo registrar momentos através da arte da
+                                <strong>fotografia</strong>, capturando a beleza ao meu redor. Explorar
+                                <strong>experiências gastronômicas</strong> é uma das minhas paixões, adoro
+                                experimentar sabores e texturas que despertam os sentidos. Estou sempre aberta a
+                                novas aventuras e descobertas!
+                            </p>
+                            <h2 class="titulo">Graduada em Análise e Desenvolvimento de Sistemas
+                                <strong>(IFPI)</strong>
+                            </h2>
+                            <li>Especialização em Docência do Ensino Superior <strong>(FAITEH)</strong>
+                            <li> Mestrado em Ciência da Computação <strong>(UECE)</strong>
+                            <li> Como orientadora de projetos de <strong>engenharia de software</strong> na área de
+                                tecnologia, minha jornada é uma fusão empolgante de inovação, colaboração e
+                                resolução de problemas. Cada projeto representa uma oportunidade única para aplicar
+                                conhecimentos avançados, inspirar equipes e alcançar soluções de ponta.
+                                <h2 class="titulo">Criação da loja</h2>
+                                <p id="colecao"> Em fevereiro de 2023 decidi criar a <strong>Vann Store</strong>,
+                                    loja voltada
+                                    para o público feminino, com o objetivo de oferecer produtos de matéria-prima de
+                                    qualidade, para enfatizar o valor da mulher elegante e clássica em diversos
+                                    momentos do seu dia!
+                        </ul>
+                    </td>
             </tr>
         </table>
     </div>
-   <br>
-   <hr>
-        
-    <div>
-        <section>
-            <h2 class="titulo">Informações de Compra</h2>
-                    <table class="dados-user">
-                        <tbody>
-                            <hr class="hr-compra"> 
-                            <h3 class="titulo">Sobre o cliente</h3>
-                            <tr>
-                                <form>
-                                        <tr>
-                                            <td class="nome-user">
-                                                <span>
-                                                    <label for="nome">Nome</label>
-                                                    <input class="nome-input" type="text" id="nome">
-                                                </span> 
-                                            </td> 
-                                            <td class="nome-data-user">
-                                                <span>
-                                                    <label for="data-nascimento">Data de Nascimento</label>
-                                                    <input type="date" id="data-nascimento">
-                                                </span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="endereco-input" colspan="2">
-                                                <label for="endereco">Endereço</label>
-                                                <input type="text" id="endereco" class="endereco-barra">
-                                            </td>
-                                        </tr>
-                                    </form>
-                                </tr>
-                            </tbody>
-                            <tr>
-                                <form>
-                                    <table>
-                                        <br>
-                                    <hr class="hr-compra">
-                                    <h3 class="titulo">Sobre o item</h3>
-                                    <tr>
-                                        <div>
-                                            <label for="qtd">Quantidade</label>
-                                            <input type="number" id="qtd">
-                                        </div>
-                                    </tr>
-                                    <br>
-                                    <tr>
-                                        <div class="opcao-tamanho">
-                                            <span>
-                                                <input type="radio" id="tamanho-1" name="tamanho-peca">
-                                                <label for="tamanho-1">PP</label>
-                                            </span>
-                                            <span>
-                                                <input type="radio" id="tamanho-2" name="tamanho-peca">
-                                                <label for="tamanho-2">P</label>
-                                            </span>
-                                            <span>
-                                                <input type="radio" id="tamanho-3" name="tamanho-peca">
-                                                <label for="tamanho-3">M</label>
-                                            </span>
-                                            <span>
-                                                <input type="radio" id="tamanho-4" name="tamanho-peca">
-                                                <label for="tamanho-4">G</label>
-                                            </span>
-                                            <span>
-                                                <input type="radio" id="tamanho-5" name="tamanho-peca">
-                                                <label for="tamanho-5">GG</label>
-                                            </span>
-                                        </div>
-                                    </tr>
-                                    <br>
-                                    <tr>
-                                        <div class="opcao-cor">
-                                            <label for="cor-roupa">Cor</label>
-                                            <input type="color" id="cor-roupa">
-                                        </div>
-                                        <br>
-                                        <div class="div-tabela-tamanho">
-                                        <table class="tabela-tamanho">
-                                            <thead>
-                                                <tr>
-                                                    <th></th>
-                                                    <th>Cintura</th>
-                                                    <th>Busto</th>
-                                                    <th>Altura</th>
-                                                    <th>Veste</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td><strong>PP</strong></td>
-                                                    <td>80</td>
-                                                    <td>84</td>
-                                                    <td>58</td>
-                                                    <td>32/34</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><strong>P</strong></td>
-                                                    <td>82</td>
-                                                    <td>86</td>
-                                                    <td>60</td>
-                                                    <td>34/36</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><strong>M</strong></td>
-                                                    <td>86</td>
-                                                    <td>90</td>
-                                                    <td>64</td>
-                                                    <td>38/40</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><strong>G</strong></td>
-                                                    <td>88</td>
-                                                    <td>92</td>
-                                                    <td>66</td>
-                                                    <td>40/42</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><strong>GG</strong></td>
-                                                    <td>92</td>
-                                                    <td>96</td>
-                                                    <td>70</td>
-                                                    <td>44/46</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <br>
-                                    </tr>
-                                </table>
-                            </form>
-                        </tr>
-                        <hr class="hr-compra">
-                        <tr>
-                            <form>
-                                <h3 class="titulo">Forma de Pagamento</h3>
-                                <div class="escolha-pagamento">
-                                    <div>
-                                        <label for="cupom">Cupom de Desconto</label>
-                                        <input type="text" id="cupom">
-                                    </div>
-                                    <div class="tipo-pagamento">
-                                        <label for="forma-pagamento">Pagamento</label>
-                                        <select name="pagamento" id="forma-pagamento">
-                                            <option>Cartão</option>
-                                            <option>Pix</option>
-                                            <option>Boleto Bancário</option>
-                                        </select>
-                                    </div>
-                                </div><br>
-                                <br>
-                                <div class="botao">
-                                        <button class="botao-finalizar" type="submit"><a href="index2.html">Finalizar compra</a></button>
-                                        <button class="botao-cancelar" type="reset"><a href="index2.html">Cancelar Compra</a></button>
-                                </div>
-                            </form>
-                        </tr>
+    <br>
+    <!-- essa foi a única parte que usamos o javascript. pegamos uma biblioteca na internet pois nosso conhecimento era quase nulo em js basicamente -->
+    <div class="roupas">
+        <br>
+        <h2 class="titulo-colecao">Coleção de Roupas</h2>
+        <div class="carousel">
+            <div> <img src="images/close1.jpg" alt="look1" /> </div>
+            <div> <img src="images/close2.png" alt="look2" /> </div>
+            <div> <img src="images/close4.jpg" alt="look3" /> </div>
+            <div> <img src="images/close5.jpg" alt="look4" /> </div>
+            <div> <img src="images/close3.png" alt="look5" /> </div>
+            <div> <img src="images/close6.jpg" alt="look6" /> </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"></script>
+        <script>
+            // para usar essa função da biblioteca importada, usamos a classe "carousel" e configuramos com base no jeito que a gente queria:
+            $(document).ready(function () {
+                $('.carousel').slick({
+                    // esse autoplay é para o carrossel passar para o lado sozinho, sem precisar das setas necessariamente
+                    autoplay: false,
+                    // esses slides to show e slides to scroll são as imagens que queremos que sejam exibidas e a quantidade de pontinhos que vão indicar quantas páginas precisam ser roladas para exibir tudo
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    // velocidade da animação de rolagem
+                    speed: 500,
+                    // se os pontinhos embaixo do carrossel aparecem ou não
+                    dots: true,
+                })
+            });
+        </script>
+        <!-- div feita para dar colocar o id da navegação do menu, colocando esse id em outro lugar, fica cortado por causa do menu fixo -->
+
+        <section class="looks-disponiveis">
+            <h2>Coleções Disponíveis</h2>
+            <div class="all-cards">
+                <span class="card">
+                    <div>
+                        <img src="/images/close1.jpg" width="100%" alt="look 1">
                     </div>
-                    </table>        
-        </section>   
+                    <div class="card">
+                        <h4>Linha Ametista</h4>
+                        <p class="desconto">R$159,00</p>
+                        <p class="valor">R$99.90</p>
+                        <p class="parcela">10 X DE R$9,90</p>
+                        <a class="botao-compra" href="formulario-compras.html" target="_blank">COMPRAR</a>
+                    </div>
+                </span>
+                <span class="card">
+                    <div>
+                        <img src="/images/close2.png" width="100%" alt="look 2">
+                    </div>
+                    <div class="card">
+                        <h4>Linha Colection</h4>
+                        <p class="desconto">R$399,00</p>
+                        <p class="valor">R$199.90</p>
+                        <p class="parcela">10 X DE R$19,90</p>
+                        <a class="botao-compra" href="formulario-compras.html" target="_blank">COMPRAR</a>
+                    </div>
+                </span>
+                <span class="card">
+                    <div>
+                        <img src="/images/close3.png" width="100%" alt="look 3">
+                    </div>
+                    <div class="card">
+                        <h4>Linha Telha</h4>
+                        <p class="desconto">R$299,00</p>
+                        <p class="valor">R$119.90</p>
+                        <p class="parcela">10 X DE R$11,90</p>
+                        <a class="botao-compra" href="formulario-compras.html" target="_blank">COMPRAR</a>
+                    </div>
+                </span>
+                <span class="card">
+                    <div>
+                        <img src="/images/close4.jpg" width="100%" alt="look 4">
+                    </div>
+                    <div class="card">
+                        <h4>Linha Flower</h4>
+                        <p class="desconto">R$459,00</p>
+                        <p class="valor">R$259.90</p>
+                        <p class="parcela">10 X DE R$25,90</p>
+                        <a class="botao-compra" href="formulario-compras.html" target="_blank">COMPRAR</a>
+                    </div>
+                </span>
             </div>
-            <hr>
-            <div class="fim-pagina">
-                <h5>Todos os direitos reservados à Emilia Nunes, Laís Nicoly e Sarah Ellen</h5>
-            </div>
-        </body>
-    </html>
+        </section>
+        <div id="compra"></div>
+        <br>
+    </div>
+    <hr>
+
+    <!-- fim da página -->
+    <div class="fim-pagina">
+        <h5>Todos os direitos reservados à Emilia Nunes, Laís Nicoly e Sarah Ellen</h5>
+    </div>
+    </div>
+</body>
+
+</html>
