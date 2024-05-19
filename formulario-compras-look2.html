@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- adicionando fonte Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- linkando o css -->
+    <link rel="stylesheet" href="style-form.css">
+
+    <title>Formulário de Compras</title>
+</head>
+
+<body>
+    <!-- criando o menu fixo do topo da página, nele tem o nome do site e os links navegáveis no próprio html -->
+    <nav class="nav-bar">
+        <span class="vann-store">
+            <h1>Vann Store</h1>
+        </span>
+        <span class="menu">
+            <!-- essas "#" no href servem para eu navegar, ao clicar nelas, dentro da página para onde está o id com seus respectivos nomes -->
+            <a href="index.html" target="_blank">Início</a>
+            <a href="#sobre-mim">Sobre mim</a>
+            <a href="#colecao">Coleção</a>
+        </span>
+    </nav>
+    <!-- seção de compras -->
+    <h2 class="titulo" style="text-align: center;">Informações de Compra</h2>
+    <section class="venda-roupa">
+        <div class="look">
+            <img src="/images/close2.png" width="520vw" alt="look 1" style="border-radius: 5%;">
+        </div>
+        <div>
+            <form>
+                <h1 class="titulo-roupa">Linha Collection</h1>
+                <div class="info">
+                    <p class="desconto">R$399,00</p>
+                    <p class="valor">R$199.90</p>
+                    <p class="parcela">10 X DE R$19,90</p>
+                    <div class="frete">
+                        <i class="bi bi-truck"></i>
+                        <p> Frete Grátis</p>
+                    </div>
+                </div>
+                <hr class="hr-compra">
+                <div class="quantidade">
+                    <label for="qtd">Quantidade</label>
+                    <input type="number" id="qtd">
+                </div>
+                <!-- escolha do tamanho da peça -->
+                <div class="opcao-tamanho">
+                    <span>
+                        <input type="radio" id="tamanho-1" name="tamanho-peca">
+                        <label for="tamanho-1">PP</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="tamanho-2" name="tamanho-peca">
+                        <label for="tamanho-2">P</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="tamanho-3" name="tamanho-peca">
+                        <label for="tamanho-3">M</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="tamanho-4" name="tamanho-peca">
+                        <label for="tamanho-4">G</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="tamanho-5" name="tamanho-peca">
+                        <label for="tamanho-5">GG</label>
+                    </span>
+                </div>
+                <hr class="hr-compra">
+            </form>
+            <!-- formulário de pagamento -->
+                    
+                    <div class="pagamento">
+
+                    <form>
+                    <h3 class="titulo">Forma de Pagamento</h3>
+                    <div class="escolha-pagamento">
+                        <div>
+                            <label for="cupom">Cupom de Desconto</label>
+                            <input type="text" id="cupom">
+                        </div>
+                        <div class="tipo-pagamento">
+                            <label for="forma-pagamento">Pagamento</label>
+                            <select name="pagamento" id="forma-pagamento">
+                                <option>Cartão</option>
+                                <option>Pix</option>
+                                <option>Boleto Bancário</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="botao">
+                        <a class="botao-finalizar" type="submit" href="index.html">Finalizar compra</a>
+                        <a class="botao-cancelar" type="reset" href="index.html">Cancelar Compra</a>
+                            </div>
+                    </form>
+                    </div>
+            <!-- tabela de tamanhos das roupas com base nas medidas equivalentes -->
+            <!-- <div class="div-tabela-tamanho">
+                <table class="tabela-tamanho">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Cintura</th>
+                            <th>Busto</th>
+                            <th>Altura</th>
+                            <th>Veste</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>PP</strong></td>
+                            <td>80</td>
+                            <td>84</td>
+                            <td>58</td>
+                            <td>32/34</td>
+                        </tr>
+                        <tr>
+                            <td><strong>P</strong></td>
+                            <td>82</td>
+                            <td>86</td>
+                            <td>60</td>
+                            <td>34/36</td>
+                        </tr>
+                        <tr>
+                            <td><strong>M</strong></td>
+                            <td>86</td>
+                            <td>90</td>
+                            <td>64</td>
+                            <td>38/40</td>
+                        </tr>
+                        <tr>
+                            <td><strong>G</strong></td>
+                            <td>88</td>
+                            <td>92</td>
+                            <td>66</td>
+                            <td>40/42</td>
+                        </tr>
+                        <tr>
+                            <td><strong>GG</strong></td>
+                            <td>92</td>
+                            <td>96</td>
+                            <td>70</td>
+                            <td>44/46</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <tr>
+                </div> -->
+            </section>
+                
+                <!-- <div class="compra-final">
+                    <a class="botao-compra" href="formulario-compras.html" target="_blank">QUERO COMPRAR AGORA!</a>
+                </div> -->
+                    
+                </body>
+
+</html>
