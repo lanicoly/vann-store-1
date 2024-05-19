@@ -119,9 +119,81 @@ hr {
     
 }
 
-
 .roupas {
-    background-color: #e9c9b3;
+    position: relative;
+    /* margin-top: 68px; */
+    margin: 0 auto;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    width: 600%;
+    height: 100%;
+    display: flex;
+}
+
+.carousel input{
+    display: none;
+}
+
+.carrossel{
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    position: relative;
+}
+
+.gira_gira{
+    width: 600%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    animation-name: slideshow;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+    animation-duration: 10s;
+    animation-direction: alternate;
+}
+
+@keyframes slideshow { 
+    0% { margin-left: 0; } 
+    15% { margin-left: -20%; } 
+    30% { margin-left: -40%; }  
+    45% { margin-left: -60%; }  
+    60% { margin-left: -80%; }
+    75% {margin-left: -100%;}
+    90% {margin-left: -120%;}
+    100% {margin-left: -140%;}
+}
+
+.slide img{
+    width: 100%;
+    height: 500px;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .gira_gira{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .gira_gira{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .gira_gira{
+    margin-left: -50%;
+}
+
+.manual-btn:hover{
+    background-color: white;
 }
 
 section {
@@ -162,10 +234,6 @@ section h2 {
 
 .fim-pagina hr {
     height: 1px;
-}
-
-img {
-    border-radius: 10px;
 }
 
 button {
@@ -369,4 +437,5 @@ div.card {
     float: left;
     padding: 0px 40px;
     border-radius: 20px;
+    padding-top: 64px;
 }
