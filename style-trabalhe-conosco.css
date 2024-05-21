@@ -1,0 +1,207 @@
+:root {
+    --cor-titulo-laranja-escuro: #833111;
+    --cor-titulo-geral: #9b431f;
+    --peso-titulo:700;
+    --cor-botao-verde: #16C34D;
+    --cor-botao-vermelho: #DC0505;
+    --cor-titulo-bege: #f4e9e0;
+    --cor-roxo-escuro: #622866;
+    --cor-roxo-claro: #87138f;
+}
+
+body {
+    background-color: #f4e9e0;
+    font-family: 'Montserrat';
+    font-size: 14px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.nav-bar {
+    height: 64px;
+    width: 100%;
+    background-color: var(--cor-titulo-laranja-escuro);
+    color: var(--cor-titulo-bege);
+    position: fixed;
+    display: flex;
+    z-index: 1;
+    text-align: center;
+    top: 0;
+    left: 0;
+    align-items: center;
+    font-weight: bold;
+}
+
+.vann-store {
+    font-family: "Allura", cursive;
+    font-size: 28px;
+    color: var(--cor-titulo-bege);
+    display: inline-block;
+    width: 30%;
+    position: absolute;
+}
+
+.vann-store h1 {
+    text-align: left;
+    padding-left: 32px;
+}
+
+.menu {
+    width: 100%;
+}
+
+.menu a {
+    padding: 24px;
+    justify-content: center;
+    display: inline-block;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.conteudo {
+    margin-top: 64px;
+}
+
+section {
+    margin: 0 auto;
+    width: 70%;
+
+}
+
+.introducao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    padding: 20px 20px;
+    font-size: 16px;
+}
+
+.titulo {
+    color: var(--cor-roxo-escuro);
+    font-weight: 600;
+    margin: 10px;
+}
+
+.all-vagas {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.vaga {
+    width: 200px;
+    padding: 10px;
+}
+
+i {
+    font-size: 85px;
+    color: var(--cor-roxo-escuro);
+}
+
+#atd-online {
+    margin-top: 0px;
+    color: var(--cor-roxo-escuro);
+}
+
+
+input, select, textarea, button {
+    border-radius: 10px;
+    padding: 4px;
+}
+
+.campo {
+    margin-bottom: 10px;
+    flex: 1;
+}
+
+.campo select {
+    width: 85%;
+    font-family: "Poppins", "Montserrat", Roboto;
+    color: #31353a;
+}
+
+.campo input, .campo option, .campo textarea {
+    width: 90%;
+    font-family: "Poppins", "Montserrat", Roboto;
+    color: #31353a;
+    padding: 6px;
+}
+
+input:enabled{
+    border: 2px solid var(--cor-titulo-laranja-escuro);
+}
+
+h3 {
+    color: var(--cor-roxo-escuro);
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.campo label {
+    margin-bottom: 4px;
+    display: block;
+    color: var(--cor-titulo-geral);
+    font-weight: 600;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-left: 0px;
+}
+
+textarea {
+    width: 90%;
+}
+
+.oportunidade h2 {
+    text-align: center;
+}
+
+.campo input[type="text"], .campo input[type="email"], .campo input[type="tel"], .campo select, .campo textarea{
+    border: 1px solid var(--cor-titulo-laranja-escuro);
+}
+
+.campo input[type="text"]:focus, .campo input[type="email"]:focus, .campo input[type="tel"]:focus, .campo select:focus, .campo textarea:focus{
+    border: 2px solid var(--cor-titulo-laranja-escuro);
+}
+
+.botao {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    width: 30%;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 12px;
+    background-color: #512454;
+    color: white;
+    font-family: "Poppins", Helvetica;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #87138f;
+    text-decoration: none;
+    transform: scale(1.06);
+    transition: all .2s ease-in-out;
+}
