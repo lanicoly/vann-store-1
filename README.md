@@ -14,6 +14,8 @@ Acesse o arquivo .zip do código aqui: https://drive.google.com/file/d/1OsQ82hTo
    <li>Sarah Ellen</li>
   <li>Laís Nicoly</li>
   <li>Priscila Freitas</li>
+  <li>Yasmin Silva</li>
+  <li>Yasmim Santana</li>
  </ul>
 
 <hr>
@@ -21,7 +23,7 @@ Acesse o arquivo .zip do código aqui: https://drive.google.com/file/d/1OsQ82hTo
 Esse é só o começo! 🌟💪
 
 > [!NOTE]
-> Prazo para entrega do site otimizado e com interatividade: 07/05/2024
+> Prazo para entrega do site otimizado e com interatividade: 20/06/2024
 
 <br>
 
