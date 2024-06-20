@@ -272,6 +272,74 @@ a:hover {
     margin-top: 64px;
 }
 
+.carrossel {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    overflow: hidden;
+}
+
+.conteudo-carrossel {
+    width: 400%;
+    height: auto;
+    display: flex;
+
+}
+
+.conteudo-carrossel input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: 1s;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 0px;
+}
+
+.nav-manual, .nav-auto {
+    position: absolute;
+    width: 100%;
+    margin-top: 32%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.nav-manual .botao-manual, .nav-auto div {
+    border: 1.4px solid #87138f;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.nav-manual .botao-manual:hover {
+    background-color: #87138f;
+}
+
+#radio1:checked ~ .nav-auto .botao-auto1, #radio2:checked ~ .nav-auto .botao-auto2,  #radio3:checked ~ .nav-auto .botao-auto3{
+    background-color: #87138f;
+}
+
+#radio1:checked ~ .primeiro {
+    margin-left: 0%;
+}
+#radio2:checked ~ .primeiro {
+    margin-left: -25%;
+}
+#radio3:checked ~ .primeiro {
+    margin-left: -50%;
+}
+
 .all-cards {
     display: flex;
     justify-content: center;
@@ -330,8 +398,8 @@ div.card {
     border-radius: 10px 10px 0% 0%;
 }
 
-.card:hover {
-    box-shadow: var(--cor-titulo-laranja-escuro);
+span.card:hover {
+    box-shadow: -5px 5px 10px #833111;
 }
 
 .looks-disponiveis {
@@ -340,6 +408,7 @@ div.card {
     padding: 16px 0px;
     text-align: center;
     margin-bottom: 24px;
+    margin-top: 80px;
     width: 100%;
 }
 
@@ -385,9 +454,4 @@ div.card {
     float: left;
     padding: 0px 40px;
     border-radius: 20px;
-}
-
-.carrossel img{
-    width: 100%;
-    border-radius: 0px;
 }

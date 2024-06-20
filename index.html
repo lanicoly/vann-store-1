@@ -79,50 +79,39 @@
                 <p>Protegemos seus dados</p>
             </div>
         </div>
-        <div class="carrossel">
-            <img src="images/banner2.svg" alt="">
+        <section class="carrossel">
+        <div class="conteudo-carrossel">
+            <input type="radio" name="button-radio" id="radio1">
+            <input type="radio" name="button-radio" id="radio2">
+            <input type="radio" name="button-radio" id="radio3">
+
+            <div class="slide primeiro">
+                <img class="imagem-slide" src="images/banner1.svg" alt="banner 1">
+            </div>
+
+            <div class="slide">
+                <img class="imagem-slide" src="images/banner2.svg" alt="banner 2">
+            </div>
+
+            <div class="slide">
+                <img class="imagem-slide" src="images/banner3.svg" alt="banner 3">
+            </div>
+
+            <div class="nav-auto">
+                <div class="botao-auto1"></div>
+                <div class="botao-auto2"></div>
+                <div class="botao-auto3"></div>
+            </div>
+
+            <div class="nav-manual">
+                <label for="radio1" class="botao-manual"></label>
+                <label for="radio2" class="botao-manual"></label>
+                <label for="radio3" class="botao-manual"></label>
+            </div>
+
         </div>
-        <!-- aqui foi usado uma tabela para organizar a foto da vanessa ao lado do texto sobre ela quando estávamos iniciando nosso aprendizado, assim precisamos refazer essa parte sem usar a tabela para obter esse efeito -->
+        </section>
     </div>
-    <br>
-    <!-- essa foi a única parte que usamos o javascript. pegamos uma biblioteca na internet pois nosso conhecimento era quase nulo em js basicamente -->
-    <!-- <div class="roupas">
-        <div class="carousel"> -->
-            <!-- radio buttons -->
-            <!-- <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio2">
-            <input type="radio" name="radio-btn" id="radio3"> -->
-            <!-- fim radio buttons -->
-
-            <!-- imagens -->
-            <!-- <span class="gira_gira">
-            <div class="slide first"> <img src="images/close1.jpg" alt="look1" /> </div>
-            <div class="slide"> <img src="images/close3.png" alt="look2" /> </div>
-            <div class="slide"> <img src="images/close4.jpg" alt="look3" /> </div>
-            <div class="slide"> <img src="images/close5.jpg" alt="look4" /> </div>
-            <div class="slide"> <img src="images/close2.png" alt="look5" /> </div>
-            <div class="slide"> <img src="images/close6.jpg" alt="look6" /> </div>
-            </span> -->
-            <!-- fim imagens -->
-
-            <!-- navegação -->
-            <!-- <div class="navegacao">
-                <div class="btn1"></div>
-                <div class="btn2"></div>
-                <div class="btn3"></div>
-            </div> -->
-            <!-- fim nvegação -->
-        <!-- </div>
-
-        <div class="manual-navegacao">
-            <label for="radio1" class="manual-btn"></label>
-            <label for="radio2" class="manual-btn"></label>
-            <label for="radio3" class="manual-btn"></label>
-        </div>
-
-    <br>
-    </div> -->
-
         <section class="looks-disponiveis" id="colecao">
             <h2>Coleções Disponíveis</h2>
             <div class="all-cards">
@@ -228,6 +217,24 @@
         <h5>Todos os direitos reservados à Emilia Nunes, Laís Nicoly, Sarah Ellen e Priscila Freitas</h5>
     </div>
     </div>
+    <script>
+        var radio = document.querySelector('.botao-manual');
+        var qtd = 1;
+        document.getElementById('radio1').checked = true;
+        setInterval(() => {
+            proximaImg()
+        }, 5000);
+        
+        function proximaImg(){
+            qtd+=1;
+
+            if (qtd > 3){
+                qtd = 1;
+            };
+
+            document.getElementById('radio'+qtd).checked = true;
+        }
+    </script>
 </body>
 
 </html>
