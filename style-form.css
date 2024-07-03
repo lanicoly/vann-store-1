@@ -11,6 +11,7 @@ body {
     background-color: #f4e9e0;
     font-family: 'Montserrat';
     font-size: 14px;
+    margin: 0px;
 }
 
 html {
@@ -147,8 +148,14 @@ p, li {
     margin: 8px 0px 4px 0px;
 }
 
+
 label, .tipo-pagamento, option {
     font-family: "Montserrat", "Poppins", Roboto;
+}
+
+.tipo-pagamento select {
+    border-radius: 4px;
+    font-family: 'Montserrat';
 }
 
 input {
@@ -328,4 +335,132 @@ a:hover {
 .botao {
     display: flex;
     justify-content: center;
+}
+
+
+footer {
+    height: 200px;
+    padding-left: 10px;
+    background-color: var(--cor-titulo-laranja-escuro);
+    margin: 0px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    gap: 50px;
+    width: 100%;
+    margin: 0px;
+    
+}
+
+.contato, .contato a  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    color: white;
+
+}
+
+.contato h3 {
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.contato a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.contato i {
+    font-size: 14px;
+    color: white;
+}
+
+.paginas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: white;
+}
+
+.paginas a {
+    margin: 8px 0px;
+    text-decoration: none;
+    color: white;
+}
+
+.paginas a:hover {
+    text-decoration: underline;
+}
+
+.sobre-loja {
+    /* width: 33%; */
+    padding: 10px;
+}
+.foto-vanessa {
+    width: 155px;
+    padding-right: 10px;
+}
+
+.foto-sobre-mim {
+    float: left;
+    /* width: 28%;
+    padding-left: 32px;
+    padding-top: 24px; */
+}
+
+.texto-sobre-mim {
+    max-width: 500px;
+    text-align: justify;
+    font-weight: 600px;
+    color: white;
+    font-size: 12px;
+}
+
+.fim-pagina {
+    text-align: center;
+    font-weight: 200;
+    background-color: #f4e9e0;
+}
+
+.fim-pagina hr {
+    height: 1px;
+}
+
+h5 {
+    font-weight: 500;
+    color: var(--cor-titulo-laranja-escuro);
+}
+
+.texto-sobre-mim h2 {
+    font-size: 14px;
+    font-weight: 700;
+}
+.fim-pagina {
+    text-align: center;
+    font-weight: 200;
+    background-color: #f4e9e0;
+}
+
+.fim-pagina hr {
+    height: 1px;
+}
+
+.icones{
+    display: flex; 
+    gap: 17px; 
+    align-items: center; 
+    font-size: 17px; 
+    margin-right: 20px;
+
+}
+
+.icones i {
+    color: white;
+    font-size: 17px;
 }

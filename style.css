@@ -5,6 +5,8 @@
     --cor-botao-verde: #16C34D;
     --cor-botao-vermelho: #DC0505;
     --cor-titulo-bege: #f4e9e0;
+    --cor-roxo-escuro: #512454;
+    --cor-roxo-claro: #87138f;
 
 }
 
@@ -105,26 +107,83 @@ section h2 {
     text-align: center;
 }
 
+footer {
+    height: 200px;
+    padding-left: 10px;
+    background-color: var(--cor-titulo-laranja-escuro);
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    gap: 50px;
+}
+
+.contato, .contato a  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    color: white;
+
+}
+
+.contato h3 {
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.contato a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.paginas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.paginas a {
+    margin: 8px 0px;
+}
+
+.sobre-loja {
+    /* width: 33%; */
+    padding: 10px;
+}
 .foto-vanessa {
-    max-width: 380px;
+    width: 155px;
+    padding-right: 10px;
 }
 
 .foto-sobre-mim {
-    width: 28%;
+    float: left;
+    /* width: 28%;
     padding-left: 32px;
-    padding-top: 24px;
+    padding-top: 24px; */
 }
 
 .texto-sobre-mim {
-    display: flex;
-    text-align: left;
-    padding-right: 32px;
+    max-width: 500px;
+    text-align: justify;
+    font-weight: 600px;
+    color: white;
+    font-size: 12px;
+
 }
 
-
+.texto-sobre-mim h2 {
+    font-size: 14px;
+    font-weight: 700;
+}
 .fim-pagina {
     text-align: center;
     font-weight: 200;
+    background-color: #f4e9e0;
 }
 
 .fim-pagina hr {
@@ -213,6 +272,74 @@ a:hover {
     margin-top: 64px;
 }
 
+.carrossel {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    overflow: hidden;
+}
+
+.conteudo-carrossel {
+    width: 400%;
+    height: auto;
+    display: flex;
+
+}
+
+.conteudo-carrossel input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: 1s;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 0px;
+}
+
+.nav-manual, .nav-auto {
+    position: absolute;
+    width: 100%;
+    margin-top: 32%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.nav-manual .botao-manual, .nav-auto div {
+    border: 1.4px solid #87138f;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.nav-manual .botao-manual:hover {
+    background-color: #87138f;
+}
+
+#radio1:checked ~ .nav-auto .botao-auto1, #radio2:checked ~ .nav-auto .botao-auto2,  #radio3:checked ~ .nav-auto .botao-auto3{
+    background-color: #87138f;
+}
+
+#radio1:checked ~ .primeiro {
+    margin-left: 0%;
+}
+#radio2:checked ~ .primeiro {
+    margin-left: -25%;
+}
+#radio3:checked ~ .primeiro {
+    margin-left: -50%;
+}
+
 .all-cards {
     display: flex;
     justify-content: center;
@@ -226,7 +353,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 200px; 
+    width: 250px; 
     height: auto; 
     border-radius: 10px;
     font-size: 14px;
@@ -271,8 +398,8 @@ div.card {
     border-radius: 10px 10px 0% 0%;
 }
 
-.card:hover {
-    box-shadow: var(--cor-titulo-laranja-escuro);
+span.card:hover {
+    box-shadow: -5px 5px 10px #833111;
 }
 
 .looks-disponiveis {
@@ -281,6 +408,7 @@ div.card {
     padding: 16px 0px;
     text-align: center;
     margin-bottom: 24px;
+    margin-top: 80px;
     width: 100%;
 }
 
