@@ -12,8 +12,15 @@ Acesse o arquivo .zip do código aqui: https://drive.google.com/file/d/1OsQ82hTo
  <ul>
    <li>Emilia Nunes</li>
    <li>Sarah Ellen</li>
+<<<<<<< HEAD
    <li>Laís Nicoly</li>
    <li>Priscila Freitas</li>
+=======
+  <li>Laís Nicoly</li>
+  <li>Priscila Freitas</li>
+  <li>Yasmin Silva</li>
+  <li>Yasmim Santana</li>
+>>>>>>> b0e16147468ab7aa2959393cb18b7e7603fc69ac
  </ul>
 
 <hr>
@@ -21,7 +28,7 @@ Acesse o arquivo .zip do código aqui: https://drive.google.com/file/d/1OsQ82hTo
 Esse é só o começo! 🌟💪
 
 > [!NOTE]
-> Prazo para entrega do site otimizado e com interatividade: 07/05/2024
+> Prazo para entrega do site otimizado e com interatividade: 20/06/2024
 
 <br>
 
