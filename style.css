@@ -327,3 +327,32 @@ div.card {
     padding: 0px 40px;
     border-radius: 20px;
 }
+.header__search{
+    display: flex;
+    align-items: center;
+    width: 30rem;
+    height: 3rem;
+    margin-left: 8px;
+    background-color: var(--color-gray);
+    border-radius: 500px;
+    border: 1px solid transparent;
+}
+
+.header__search img{
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+}
+
+.header__search input{
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    padding: 0px 100px 0px 12px;
+    color: var(--color-white);
+    overflow: hidden;
+    white-space: nowrap;
+    outline: none;
+}
+
+
