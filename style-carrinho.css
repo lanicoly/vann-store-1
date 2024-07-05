@@ -1,0 +1,639 @@
+:root {
+    --cor-titulo-laranja-escuro: #833111;
+    --cor-titulo-geral: #9b431f;
+    --peso-titulo:700;
+    --cor-botao-verde: #16C34D;
+    --cor-botao-vermelho: #DC0505;
+    --cor-titulo-bege: #f4e9e0;
+    --cor-roxo-escuro: #512454;
+    --cor-roxo-claro: #87138f;
+
+}
+
+body {
+    background-color: #f4e9e0;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    margin: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p, li {
+    text-align: justify;
+}
+
+.titulo, .titulo-colecao, strong, th, .looks-disponiveis h2, hr {
+    color: var(--cor-titulo-geral);
+}
+
+h5 {
+    font-weight: 500;
+    color: var(--cor-titulo-laranja-escuro);
+}
+
+hr {
+    height: 4px;
+}
+
+.container-services{
+    height:90px;
+    width: 100%;
+    background-color: #e9c9b3;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    color:#833111;
+}
+
+.service{
+    flex: 1;
+    text-align: center;
+}
+  
+.services h2 {
+    font-size: 18px;
+    margin-bottom: 9px;
+    margin-right: 10px; 
+}
+  
+.service p {
+    font-size: 14px;
+    text-align: center;
+    margin-right: 10px; 
+    
+}
+
+.icones{
+    display: flex; 
+    gap: 17px; 
+    align-items: center; 
+    font-size: 17px; 
+    margin-right: 20px;
+
+}
+
+
+.carousel {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.carousel img {
+    height: 250px;
+    width: 250px;
+    margin: 24px;
+}
+
+.roupas {
+    background-color: #e9c9b3;
+}
+
+section {
+    display: block;
+    justify-content: center;
+    margin: auto;
+    padding-bottom: 20px;
+    padding-top: 56px;
+    margin-top: 60px;
+}
+
+
+section h2 {
+    text-align: center;
+}
+
+footer {
+    height: 200px;
+    padding-left: 10px;
+    background-color: var(--cor-titulo-laranja-escuro);
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    gap: 50px;
+}
+
+.contato, .contato a  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    color: white;
+
+}
+
+.contato h3 {
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.contato a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.paginas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.paginas a {
+    margin: 8px 0px;
+}
+
+.sobre-loja {
+    /* width: 33%; */
+    padding: 10px;
+}
+.foto-vanessa {
+    width: 155px;
+    padding-right: 10px;
+}
+
+.foto-sobre-mim {
+    float: left;
+    /* width: 28%;
+    padding-left: 32px;
+    padding-top: 24px; */
+}
+
+.texto-sobre-mim {
+    max-width: 500px;
+    text-align: justify;
+    font-weight: 600px;
+    color: white;
+    font-size: 12px;
+
+}
+
+.texto-sobre-mim h2 {
+    font-size: 14px;
+    font-weight: 700;
+}
+.fim-pagina {
+    text-align: center;
+    font-weight: 200;
+    background-color: #f4e9e0;
+}
+
+.fim-pagina hr {
+    height: 1px;
+}
+
+img {
+    border-radius: 10px;
+}
+
+button {
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+}
+
+
+button:hover {
+    outline: 2px solid var(--cor-titulo-laranja-escuro);
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.botao {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-bar {
+    height: 64px;
+    width: 100%;
+    background-color: var(--cor-titulo-laranja-escuro);
+    color: var(--cor-titulo-bege);
+    position: fixed;
+    display: flex;
+    z-index: 1;
+    text-align: center;
+    top: 0;
+    left: 0;
+    align-items: center;
+    font-weight: bold;
+}
+
+.menu {
+    width: 100%;
+}
+
+.menu a {
+    padding: 24px;
+    justify-content: center;
+    display: inline-block;
+    align-items: center;
+}
+
+.menu a :hover {
+    text-decoration: underline;
+}
+
+.vann-store {
+    font-family: "Allura", cursive;
+    font-size: 28px;
+    color: var(--cor-titulo-bege);
+    display: inline-block;
+    width: 30%;
+    position: absolute;
+}
+
+.vann-store h1 {
+    text-align: left;
+    padding-left: 32px;
+}
+
+.conteudo {
+    margin-top: 64px;
+}
+
+.carrossel {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    overflow: hidden;
+}
+
+.conteudo-carrossel {
+    width: 400%;
+    height: auto;
+    display: flex;
+
+}
+
+.conteudo-carrossel input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: 1s;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 0px;
+}
+
+.nav-manual, .nav-auto {
+    position: absolute;
+    width: 100%;
+    margin-top: 32%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.nav-manual .botao-manual, .nav-auto div {
+    border: 1.4px solid #87138f;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.nav-manual .botao-manual:hover {
+    background-color: #87138f;
+}
+
+#radio1:checked ~ .nav-auto .botao-auto1, #radio2:checked ~ .nav-auto .botao-auto2,  #radio3:checked ~ .nav-auto .botao-auto3{
+    background-color: #87138f;
+}
+
+#radio1:checked ~ .primeiro {
+    margin-left: 0%;
+}
+#radio2:checked ~ .primeiro {
+    margin-left: -25%;
+}
+#radio3:checked ~ .primeiro {
+    margin-left: -50%;
+}
+
+
+.botao-compra {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    min-width: 70%;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 12px;
+    background-color: #512454;
+    color: white;
+    font-family: "Poppins", Helvetica;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+}
+
+.botao-compra:hover {
+    background-color: #87138f;
+    text-decoration: none;
+    transform: scale(1.06);
+    transition: all .2s ease-in-out;
+}
+
+
+.botao-compra a {
+    color: white;
+}
+.botao-compra a:hover {
+   color: white;
+}
+
+.base-card {
+    display: none;
+}
+
+
+.all-cards {
+    display: flex;
+    justify-content: center;
+    gap: 1vh 5vw;
+    flex-flow: row wrap;
+    margin: 0 auto;
+    align-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px; 
+    height: auto; 
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: white;
+    padding-bottom: 10px;
+    
+}
+
+.card img {
+    width: 100%;
+    margin: 0px;
+    top: 0;
+    border-radius: 10px 10px 0% 0%;
+}
+
+
+
+.botoes-card {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    width: max-content;
+}
+
+.botoes-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+#botao-carrinho, #botao-cancelar {
+    min-width: 70%;
+}
+
+.janela-venda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 400px;
+}
+
+.carrinho-item {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    margin-top: 25%;
+    background-color: white;
+    width: 900px;
+    color: white;
+    transition: all ease .5s;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    display: none;
+    /* padding: 20px; */
+    border-radius: 20px;
+    box-shadow: -5px 5px 10px #833111;
+    /* gap: 40px; */
+}
+
+.foto-roupa-modal {
+    width: 90%;
+}
+
+.foto-roupa-modal img {
+    width: 100%;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    
+}
+
+.carrinho-item a {
+    width: max-content;
+}
+
+.modal-roupa-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    color: var(--cor-roxo-escuro);
+}
+
+.modal-roupa-info h1 {
+    margin-bottom: 10px;
+    color: var(--cor-roxo-claro);
+    font-size: 38px;
+}
+
+.roupa--qtd {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.valor-qtd {
+    display: flex;
+    flex-direction: row;
+}
+
+.item--qtd {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.roupa-tamanhos {
+    display: flex;
+    gap: 4px;
+}
+
+.titulo-tamanhos {
+    margin: 0px;
+    padding: 2px;
+    height: max-content;
+
+}
+
+.modal-roupa-valor .desconto {
+    font-size: 16px;
+    text-align: center;
+}
+
+.modal-roupa-valor .valor {
+    font-size: 38px;
+    text-align: center;
+    font-weight: 800;
+    color: #6c0a74;
+}
+
+.valor-qtd {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.modal-roupa-qtd {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.item--qtdmenos, .item--qtdmais {
+    height: max-content;
+    background-color: #512454;
+    cursor: pointer;
+}
+
+
+.item--qtdmais:hover, .item--qtdmenos:hover {
+    background-color: #87138f;
+    border: none;
+}
+
+.roupa-info-tamanho {
+    background-color: #87138f;
+    padding: 8px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+
+}
+
+.roupa-info-tamanho:hover {
+    background-color: #6c0a74;
+}
+
+.roupa-info-tamanho.selected {
+    background-color: #c94d00;
+}
+
+.card-nome {
+    color: var(--cor-titulo-laranja-escuro);
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.desconto {
+    font-weight: 500;
+    text-decoration:line-through;
+    font-size: 14px;
+    margin: 8px 0px 0px 0px;
+}
+
+.valor {
+    font-weight: 700;
+    font-size: 24px;
+    margin: 8px 0px 10px 0px;
+    color: var(--cor-titulo-laranja-escuro);
+}
+
+.parcela {
+    font-weight: 800;
+    font-size: 10px;
+    margin: 8px 0px 16px 0px;
+}
+
+div.card {
+    margin: 10px 0px;
+}
+
+
+
+div.card:hover {
+    box-shadow: -5px 5px 10px #833111;
+}
+
+.looks-disponiveis {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 1vh 5vw;
+    flex-flow: row wrap;
+    margin: 0 auto;
+    margin-top: 10px;
+    align-content: center;
+    width: 90%;
+}
+
+#colecao h2 {
+    font-size: 24px;
+    padding-bottom: 20px;
+    color: var(--cor-titulo-geral);
+}
+
+
+
+.venda-roupa {
+    width: 100%;
+    
+}
+
+.venda-roupa img{
+    float: left;
+    padding: 0px 40px;
+    border-radius: 20px;
+}
