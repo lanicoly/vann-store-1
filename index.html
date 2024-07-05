@@ -52,10 +52,19 @@
             <a href="medida-ideal.html">Medida Ideal</a>
         </span>
         <div class="icones" >
-            <a href="#">
-              <i class="bi bi-search"></i>
-              <input id="search-input" type="text" maxlength="800" placeholder="Procurar por algo..."/>
-            </a>
+            <div class="box-pesquisa">
+                <a href="#">
+                    <div class="lupa-pesquisa">
+                        <i class="bi bi-search"></i>
+                    </div>
+                    <div class="pesquisa-input">
+                        <input id="search-input" type="text" maxlength="800" placeholder="O que você procura? " onkeyup="search()"/>
+                    </div>
+                    <div class="btn-fechar">
+                        <i class="bi bi-x-circle"></i>
+                    </div>
+                 </a>
+            </div>
             <a href="#">
               <i class="bi bi-cart"></i>
             </a>
@@ -236,6 +245,7 @@
             document.getElementById('radio'+qtd).checked = true;
         }
     </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
