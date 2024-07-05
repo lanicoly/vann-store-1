@@ -77,41 +77,53 @@ hr {
 }
 
 .box-pesquisa a {
+    border-radius: 40px;
+    background:none;
     align-items: center;
     display: flex;
     text-decoration: none; /* Remove sublinhado dos links */
     justify-content: space-between;
 }
 
+.box-pesquisa:hover .pesquisa-input input {
+    width: 240px;
+}
 
 .pesquisa-input {
     border-radius: 10px;
     flex-grow: 1; /* Faz o input crescer para ocupar o espaço disponível */
 }
 
-.box-pesquisa .pesquisa-input input{
-    font-size: 14px;
+.box-pesquisa .pesquisa-input input {
+    font-size: 15px;
+    padding: 5px;
+    border: none;
+    color: #ffff; 
+    background: none;
+    width: 0;
+    transition: width 0.3s ease;
+    outline: none;
+    border-radius: 0;
 }
 
-#search-input {
-    padding: 5px; /* Espaçamento interno do input */
-    border: 1px solid #ccc; /* Borda do input */
-    border-radius: 5px; /* Bordas arredondadas */
-    outline: none; /* Remove a borda azul ao focar */
+
+.box-pesquisa .pesquisa-input input::placeholder {
+    color: #e9c9b3; 
 }
 
 .lupa-pesquisa i, .btn-fechar i {
-   cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+   cursor: pointer; 
+   margin: 5px;
 
 }
 .lupa-pesquisa i{
     width: 80px;
     height: 80px;
-    margin-right: 10px;
+    margin-right: 1px;
 }
 
 .btn-fechar {
-    margin-left: 5px; /* Espaçamento à esquerda do botão fechar */
+    margin-left: 0px; 
 }
 
 .carousel {

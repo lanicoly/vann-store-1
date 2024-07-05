@@ -5,9 +5,9 @@ function search() {
     for (let i = 0; i < cards.length; i++) {
         let h4 = cards[i].getElementsByTagName('h4')[0];
         if (h4 && h4.innerHTML.toLowerCase().includes(input)) {
-            cards[i].style.visibility = "visible";
+            cards[i].style.display = "flex";
         } else {
-            cards[i].style.visibility = "hidden";
+            cards[i].style.display = "none";
         }
     }
 }
