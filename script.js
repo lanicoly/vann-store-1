@@ -17,66 +17,110 @@ function proximaImg(){
     document.getElementById('radio'+qtd).checked = true;
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    const menuOpenner = document.querySelector('.menu-openner');
-    const janelaVenda = document.querySelector('.janela-venda');
-    const botaoCancelar = document.querySelector('#botao-cancelar');
+function search() {
+    let input = document.getElementById('search-input').value.toLowerCase();
+    let cards = document.getElementsByClassName('card');
+    
+    for (let i = 0; i < cards.length; i++) {
+        let h4 = cards[i].getElementsByTagName('h4')[0];
+        if (h4 && h4.innerHTML.toLowerCase().includes(input)) {
+            cards[i].style.visibility = "visible";
+            cards[i].style.display = "flex";
+        } else {
+            cards[i].style.visibility = "hidden";
+            cards[i].style.display = "none";
+        }
+    }
+}
 
-    // Abrir o menu do carrinho ao clicar no ícone
-    menuOpenner.addEventListener('click', function() {
-        janelaVenda.style.display = 'block'; // Ou outra lógica para mostrar o menu
-    });
+//carrinho
 
-    // Fechar o menu do carrinho ao clicar no botão cancelar
-    botaoCancelar.addEventListener('click', function(event) {
-        event.preventDefault();
-        janelaVenda.style.display = 'none'; // Ou outra lógica para esconder o menu
-    });
-});
-
-
-// Variáveis globais
 let modalKey = 0;
 let quantRoupas = 1;
 let carrinho = [];
 
-// Funções auxiliares
-const seleciona = (elemento) => document.querySelector(elemento);
-const selecionaTodos = (elemento) => document.querySelectorAll(elemento);
-const formatoReal = (valor) => valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-const formatoMonetario = (valor) => valor.toFixed(2);
+const formatoReal = (valor) => {
+    if (typeof valor !== 'number' || isNaN(valor)) {
+        return ''; 
+    }
+    
+    return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+}
 
-// Funções da aula 05 e 06 adaptadas
+
 const abrirModal = () => {
-    seleciona('.carrinho-item').style.display = 'flex';
-};
+ document.querySelector('.carrinho-item').style.display = 'flex';
+}
+
 
 const fecharModal = () => {
-    seleciona('.carrinho-item').style.display = 'none';
+    document.querySelector('.carrinho-item').style.display = 'none';
 };
+
+const botoesFechar = () => {
+        document.querySelector('#botao-cancelar').addEventListener('click', (fecharModal)
+    );
+}
+
+
+const preencheDadosRoupas = (roupaItem, item, index) => {
+    roupaItem.setAttribute('data-key', index);
+    roupaItem.querySelector('.card--img img').src = item.img;
+    roupaItem.querySelector('.card-nome').innerHTML = item.nome;
+    roupaItem.querySelector('.desconto').innerHTML = `R$ ${item.desconto.toFixed(2)}`;
+    roupaItem.querySelector('.valor').innerHTML = `R$ ${item.valor.toFixed(2)}`;
+}
+
+const preencheDadosModal = (item) => {
+    document.querySelector('.foto-roupa-modal img').src = item.img;
+    document.querySelector('.modal-roupa-info h1').innerHTML = item.nome;
+    document.querySelector('.modal-roupa-valor .desconto').innerHTML = `R$ ${item.desconto.toFixed(2)}`;
+    document.querySelector('.modal-roupa-valor .valor').innerHTML = `R$ ${item.valor.toFixed(2)}`;
+}
 
 const pegarKey = (e) => {
     let key = e.currentTarget.closest('.card').getAttribute('data-key');
+
     console.log('roupa clicada ' + key);
     console.log(roupaJson[key]);
 
     quantRoupas = 1;
     modalKey = key;
 
+    return key;
+}
+
+
+const escolherTamanho = () => {
     document.querySelectorAll('.roupa-info-tamanho').forEach((size) => {
-        size.addEventListener('click', (e) => {
-            document.querySelectorAll('.roupa-info-tamanho').forEach((el) => {
-                el.classList.remove('selected');
+        size.addEventListener('click', () => {
+            document.querySelectorAll('.roupa-info-tamanho.selected').forEach((selectedSize) => {
+                selectedSize.classList.remove('selected');
             });
             size.classList.add('selected');
         });
     });
-
-    return key;
 };
 
+
+
+const mudarQuantidade = () => {
+    document.querySelector('.item--qtdmais').addEventListener('click', () => {
+        quantRoupas++;
+        document.querySelector('.item--qtd').innerHTML = quantRoupas;
+    });
+
+    document.querySelector('.item--qtdmenos').addEventListener('click', () => {
+        if (quantRoupas > 1) {
+            quantRoupas--;
+            document.querySelector('.item--qtd').innerHTML = quantRoupas;
+        }
+    });
+}
+
 const adicionarNoCarrinho = () => {
-    document.querySelector('#botao-carrinho').addEventListener('click', () => {
+    document.querySelector('#botao-carrinho').addEventListener('click', (e) => {
+        e.preventDefault();
         console.log('Adicionar no carrinho');
 
         console.log('Roupa ' + modalKey);
@@ -88,6 +132,7 @@ const adicionarNoCarrinho = () => {
 
         let price = document.querySelector('.modal-roupa-valor .valor').innerHTML.replace('R$ ', '');
 
+
         let identificador = roupaJson[modalKey].id + 't' + size;
 
         let key = carrinho.findIndex((item) => item.identificador == identificador);
@@ -96,6 +141,7 @@ const adicionarNoCarrinho = () => {
 
         if (key > -1) {
             carrinho[key].qt += quantRoupas;
+            console.log(carrinho[key].qt);
         } else {
             let roupa = {
                 identificador,
@@ -112,34 +158,52 @@ const adicionarNoCarrinho = () => {
         fecharModal();
         abrirCarrinho();
         atualizarCarrinho();
-    });
-};
+    })
+}
 
 const abrirCarrinho = () => {
-    console.log('Qtd de itens no carrinho ' + carrinho.length);
-    if (carrinho.length > 0) {
-        document.querySelector('aside').classList.add('show');
-    }
 
-    document.querySelector('.menu-openner').addEventListener('click', () => {
-        if (carrinho.length > 0) {
-            document.querySelector('aside').classList.add('show');
-            document.querySelector('aside').style.left = '0';
+
+if (carrinho.length > 0) {
+    document.querySelector('.cart--item').style.display = 'flex';
+    document.querySelector('aside').style.display = 'block';
+    document.querySelector('main').style.width = '80%';
+    document.querySelector('main').style.marginRight = '30%';
+}
+
+document.querySelector('.menu-openner').addEventListener('click', () => {
+    if (carrinho.length > 0) {
+        if (document.querySelector('aside').style.display == 'block'){
+            document.querySelector('aside').style.display = 'none';
+            document.querySelector('main').style.width = '100%';
+            document.querySelector('main').style.marginRight = '0%';
+        } else {
+            document.querySelector('.cart--item').style.display = 'flex';
+            document.querySelector('aside').style.display = 'block';
+            document.querySelector('main').style.width = '80%';
+            document.querySelector('main').style.marginRight = '30%';
         }
-    });
+    }
+})
+
+    fecharModal();
 };
 
 const fecharCarrinho = () => {
-    document.querySelector('.menu-closer').addEventListener('click', () => {
-        document.querySelector('aside').style.left = '100vw';
-    });
+    document.querySelector('aside').style.display = 'none';
+    document.querySelector('main').style.width = '100%';
+    document.querySelector('main').style.marginRight = '0%';
+
 };
 
 const atualizarCarrinho = () => {
     document.querySelector('.menu-openner span').innerHTML = carrinho.length;
 
     if (carrinho.length > 0) {
-        document.querySelector('aside').classList.add('show');
+        document.querySelector('.cart--item').style.display = 'flex';
+        document.querySelector('aside').display = 'block';
+        document.querySelector('main').style.width = '80%';
+        document.querySelector('main').style.marginRight = '30%';
         document.querySelector('.cart').innerHTML = '';
 
         let subtotal = 0;
@@ -150,9 +214,10 @@ const atualizarCarrinho = () => {
             let roupaItem = roupaJson.find((item) => item.id == carrinho[i].id);
             console.log(roupaItem);
 
-            subtotal += carrinho[i].price * carrinho[i].qt;
+            subtotal += (carrinho[i].price * carrinho[i].qt);
+            // valor = subtotal - desconto;
 
-            let carrinhoItem = document.querySelector(".models .cart--item").cloneNode(true);
+            let carrinhoItem = document.querySelector(".all-cards .cart--item").cloneNode(true);
 
             document.querySelector('.cart').append(carrinhoItem);
 
@@ -160,104 +225,91 @@ const atualizarCarrinho = () => {
             let roupaName = `${roupaItem.nome} (${roupaSizeName})`;
 
             carrinhoItem.querySelector('img').src = roupaItem.img;
-            carrinhoItem.querySelector('.cart--item-nome').innerHTML = roupaName;
-            carrinhoItem.querySelector('.cart--item--qt').innerHTML = carrinho[i].qt;
+			carrinhoItem.querySelector('.cart--item-nome').innerHTML = roupaName;
+			carrinhoItem.querySelector('.cart--item--qt').innerHTML = carrinho[i].qt;
 
-            carrinhoItem.querySelector('.cart--item-qtmais').addEventListener('click', () => {
-                console.log('Clicou no botão mais');
-                carrinho[i].qt++;
-                atualizarCarrinho();
-            });
+			carrinhoItem.querySelector('.cart--item-qtmais').addEventListener('click', () => {
+				console.log('Clicou no botão mais')
+				carrinho[i].qt++
+				atualizarCarrinho()
+			})
 
-            carrinhoItem.querySelector('.cart--item-qtmenos').addEventListener('click', () => {
-                console.log('Clicou no botão menos');
-                if (carrinho[i].qt > 1) {
-                    carrinho[i].qt--;
-                } else {
-                    carrinho.splice(i, 1);
+			carrinhoItem.querySelector('.cart--item-qtmenos').addEventListener('click', () => {
+				console.log('Clicou no botão menos')
+				if(carrinho[i].qt > 1) {
+					carrinho[i].qt--
+				} else {
+					carrinho.splice(i, 1)
+				}
+
+                if (carrinho.length < 1) {
+                    document.querySelector('aside').style.display = 'none';
+                    document.querySelector('main').style.width = '100%';
+                    document.querySelector('main').style.marginRight = '0%';
                 }
 
-                atualizarCarrinho();
-            });
+				atualizarCarrinho();
+                // fecharCarrinho();
+			})
 
-            document.querySelector('.cart').append(carrinhoItem);
+			document.querySelector('.cart').append(carrinhoItem)
         }
+
+        desconto = subtotal * 0;
+        total = subtotal - desconto;
 
         document.querySelector('.subtotal span:last-child').innerHTML = formatoReal(subtotal);
         document.querySelector('.desconto span:last-child').innerHTML = formatoReal(desconto);
         document.querySelector('.total span:last-child').innerHTML = formatoReal(total);
 
     } else {
-        document.querySelector('aside').classList.remove('show');
-        document.querySelector('aside').style.left = '100vw';
+        document.querySelector('aside').style.display = 'none';
+        document.querySelector('main').style.width = '100%';
+        document.querySelector('main').style.marginRight = '0%';
     }
 };
 
 const finalizarCompra = () => {
-    document.querySelector('.cart--finalizar').addEventListener('click', () => {
+    document.querySelector('.cart--finalizar').addEventListener('click', (e) => {
+        e.preventDefault();
         console.log('Finalizar compra');
-        document.querySelector('aside').classList.remove('show');
-        document.querySelector('aside').style.left = '100vw';
+        document.querySelector('aside').style.display = 'none';
+        document.querySelector('main').style.width = '100%';
+        document.querySelector('main').style.marginRight = '0%';
     });
 };
 
-// Eventos e funções da aula 05 e 06
 roupaJson.map((item, index) => {
-    let roupaItem = document.querySelector('.all-cards .card').cloneNode(true);
+    let roupaItem = document.querySelector('.all-cards .base-card .card').cloneNode(true);
     document.querySelector('.looks-disponiveis').append(roupaItem);
-    roupaItem.setAttribute('data-key', index);
-    roupaItem.querySelector('.card--img img').src = item.img;
-    roupaItem.querySelector('.card-nome').innerHTML = item.nome;
-    roupaItem.querySelector('.desconto').innerHTML = `R$ ${item.desconto.toFixed(2)}`;
-    roupaItem.querySelector('.valor').innerHTML = `R$ ${item.valor.toFixed(2)}`;
 
-    roupaItem.querySelector('.card a').addEventListener('click', (e) => {
+    preencheDadosRoupas(roupaItem, item, index);
+
+
+    roupaItem.querySelector('a').addEventListener('click', (e) => {
         e.preventDefault();
-        document.querySelector('.carrinho-item').style.display = 'flex';
-        document.querySelector('.carrinho-item .foto-roupa-modal img').src = item.img;
-        document.querySelector('.modal-roupa-info h1').innerHTML = item.nome;
-        document.querySelector('.modal-roupa-valor .desconto').innerHTML = `R$ ${item.desconto.toFixed(2)}`;
-        document.querySelector('.modal-roupa-valor .valor').innerHTML = `R$ ${item.valor.toFixed(2)}`;
+        console.log('Clicou na roupa');
 
-        document.querySelector('#botao-cancelar').addEventListener('click', (e) => {
-            e.preventDefault();
-            document.querySelector('.carrinho-item').style.display = 'none';
+        let chave = pegarKey(e);
+        abrirModal();
+
+        preencheDadosModal(item);
+
+
+        document.querySelector('.item--qtd').innerHTML = quantRoupas;
+
+        escolherTamanho(chave);
+
         });
 
-        let key = e.currentTarget.closest('.card').getAttribute('data-key');
-        console.log('roupa clicada ' + key);
-        console.log(roupaJson[key]);
+        botoesFechar();
+        fecharModal();
 
-        quantRoupas = 1;
-        modalKey = key;
-
-        document.querySelectorAll('.roupa-info-tamanho').forEach((size) => {
-            size.addEventListener('click', (e) => {
-                document.querySelectorAll('.roupa-info-tamanho').forEach((el) => {
-                    el.classList.remove('selected');
-                });
-                size.classList.add('selected');
-            });
-        });
-
-        document.querySelector('.item--qtdmais').addEventListener('click', () => {
-            quantRoupas++;
-            document.querySelector('.item--qtd').innerHTML = quantRoupas;
-        });
-
-        document.querySelector('.item--qtdmenos').addEventListener('click', () => {
-            if (quantRoupas > 1) {
-                quantRoupas--;
-                document.querySelector('.item--qtd').innerHTML = quantRoupas;
-            }
-        });
-
-        return key;
     });
-});
 
-// Chamadas das funções principais
+mudarQuantidade();
+
 adicionarNoCarrinho();
-abrirCarrinho();
+atualizarCarrinho();
 fecharCarrinho();
 finalizarCompra();

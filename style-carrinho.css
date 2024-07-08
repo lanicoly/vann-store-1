@@ -108,9 +108,12 @@ section h2 {
 }
 
 footer {
-    height: 200px;
+    height: max-content;
     padding-left: 10px;
     background-color: var(--cor-titulo-laranja-escuro);
+    position: relative;
+    z-index: 2;
+    
 }
 
 .footer {
@@ -119,6 +122,7 @@ footer {
     justify-content: center;
     align-content: center;
     gap: 50px;
+    
 }
 
 .contato, .contato a  {
@@ -237,6 +241,7 @@ a:hover {
     left: 0;
     align-items: center;
     font-weight: bold;
+    z-index: 3;
 }
 
 .menu {
@@ -272,12 +277,26 @@ a:hover {
     margin-top: 64px;
 }
 
+.dentro-pagina {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+main {
+    width: 100%;
+    
+}
+
 .carrossel {
-    margin: 0 auto;
+    margin: 0px 0px 20px 0px;
     width: 100%;
     height: auto;
-    padding: 0;
+    padding: 0px;
     overflow: hidden;
+
 }
 
 .conteudo-carrossel {
@@ -377,7 +396,6 @@ a:hover {
     display: none;
 }
 
-
 .all-cards {
     display: flex;
     justify-content: center;
@@ -425,7 +443,7 @@ a:hover {
 }
 
 #botao-carrinho, #botao-cancelar {
-    min-width: 70%;
+    min-width: 60%;
 }
 
 .janela-venda {
@@ -433,14 +451,15 @@ a:hover {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    width: 400px;
+    /* width: 400px; */
 }
 
 .carrinho-item {
-    display: flex;
+    display: none;
     flex-direction: row;
-    position: fixed;
-    margin-top: 25%;
+    position: absolute;
+    margin-top: 50%;
+    top:0;
     background-color: white;
     width: 900px;
     color: white;
@@ -448,7 +467,6 @@ a:hover {
     justify-content: center;
     align-items: center;
     z-index: 1;
-    display: none;
     /* padding: 20px; */
     border-radius: 20px;
     box-shadow: -5px 5px 10px #833111;
@@ -579,10 +597,10 @@ a:hover {
 
 .desconto {
     font-weight: 500;
-    text-decoration:line-through;
     font-size: 14px;
     margin: 8px 0px 0px 0px;
 }
+
 
 .valor {
     font-weight: 700;
@@ -619,6 +637,12 @@ div.card:hover {
     width: 90%;
 }
 
+#colecao {
+    margin-top: 100px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
 #colecao h2 {
     font-size: 24px;
     padding-bottom: 20px;
@@ -639,20 +663,23 @@ div.card:hover {
 }
 
 aside {
-    background-color:#ffcdd2;
-    width:0vw;
-    font-family:'Hepta Slab', Helvetica, Arial;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    width:30%;
     transition:all ease .2s;
-    overflow-x:hidden;
+    margin-top: 64px;
+    display: none;
+    z-index: 2;
 }
 
-aside.show {
-    width:30vw;
-}
 
 .cart--area {
-    margin-top: 30px; /* ajuste */
+    margin-top: 30px;
     padding:20px;
+    overflow-y: hidden;
 }
 
 .cart--area h1 {
@@ -665,7 +692,7 @@ aside.show {
 }
 
 .cart--item {
-    display:flex;
+    display:none;
     align-items:center;
     margin:10px 0;
 }
@@ -688,6 +715,7 @@ aside.show {
 }
 
 .cart--item--qtarea button {
+    display: flex;
     border:0;
     background-color:transparent;
     font-size:17px;
@@ -695,6 +723,7 @@ aside.show {
     cursor:pointer;
     padding:0px 10px;
     color:#333;
+    align-items: center;
 }
 
 .cart--item--qt {
@@ -716,7 +745,9 @@ aside.show {
 
 .cart--totalitem span:first-child {
     font-weight: bold;
+    text-decoration: none;
 }
+
 
 .cart--totalitem.big {
     font-size:20px;
@@ -724,11 +755,15 @@ aside.show {
     font-weight: bold;
 }
 
+
+
 .cart--finalizar {
     padding:20px 30px;
     border-radius:20px;
-    background-color:#48d05f;
+    background-color:#32c44a;
     color:#FFF;
+    font-size: 18px;
+    font-weight: 600;
     cursor:pointer;
     text-align:center;
     margin-top:20px;
@@ -753,3 +788,69 @@ aside.show {
 .menu-openner span {
     margin-right:10px;
 }
+
+
+.box-pesquisa a {
+    border-radius: 40px;
+    background:none;
+    align-items: center;
+    display: flex;
+    text-decoration: none; /* Remove sublinhado dos links */
+    justify-content: space-between;
+}
+
+.box-pesquisa:hover .pesquisa-input input {
+    width: 240px;
+}
+
+.pesquisa-input {
+    border-radius: 10px;
+    flex-grow: 1; /* Faz o input crescer para ocupar o espaço disponível */
+}
+
+.box-pesquisa .pesquisa-input input{
+    font-size: 14px;
+
+}
+.box-pesquisa .pesquisa-input input {
+    font-size: 15px;
+    padding: 5px;
+    border: none;
+    color: #ffff; 
+    background: none;
+    width: 0;
+    transition: width 0.3s ease;
+    outline: none;
+    border-radius: 0;
+}
+
+#search-input {
+    padding: 5px; /* Espaçamento interno do input */
+    border: 1px solid #ccc; /* Borda do input */
+    border-radius: 5px; /* Bordas arredondadas */
+    outline: none; /* Remove a borda azul ao focar */
+}
+
+.box-pesquisa .pesquisa-input input::placeholder {
+    color: #e9c9b3; 
+}
+
+.lupa-pesquisa i, .btn-fechar i {
+   cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+   cursor: pointer; 
+   margin: 5px;
+
+}
+.lupa-pesquisa i{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    margin-right: 1px;
+}
+
+.btn-fechar {
+    margin-left: 5px; /* Espaçamento à esquerda do botão fechar */
+    margin-left: 0px; 
+}
+
+
