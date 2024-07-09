@@ -20,25 +20,70 @@
 </head>
 
 <body>
-    <div id="Login">
+    <form id="form">
         <div class="caixa">
             <img src="images/foto-site-vanessa.ico" alt=""> <br>
             <h1>Login</h1> <br>
             <div class="email">
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" placeholder="Ex.: ana@gmail.com">
+                <input type="email" class="inputs required" name="email" placeholder="Ex.: ana@gmail.com"
+                    oninput="emailValidate()">
+                <span class="span-required">Digite um e-mail válido!</span>
             </div>
             <div class="senha">
                 <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" placeholder="Insira a sua senha">
+                <input type="password" class="inputs required" name="senha" placeholder="Insira a sua senha"
+                    oninput="mainPasswordValidate()">
+                <span class="span-required"></span>
             </div> <br>
-            <div class="entrar"> 
-                <p>É novo(a) por aqui? <a href="cadastro.html">Faça cadastro!</a></p> <br>
-                <a class="enviar" href="home.html" >Enviar</a>
-            </div>
+            <p>É novo(a) por aqui? <a href="cadastro.html">Faça cadastro!</a></p> <br>
+            <span id="spanOk" style="display: none;">Envio feito com sucesso!</span>
+            <a class="enviar" href="home.html" >Enviar</a>
         </div>
-    </div>
-    </section>
+    </form>
 </body>
+<script>
+    const login = document.getElementById("form");
+    const campos = document.querySelectorAll(".required");
+    const span = document.querySelectorAll(".span-required");
+    const emailRegex = /^[\w.%+-]+@[\w.-]+\.[a-zA-Z]{2,}$/i;
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        emailValidate();
+        mainPasswordValidate();
+
+        validaTudo();
+    })
+
+    function setError(index) {
+        campos[index].style.border = '2px solid #e63636';
+        span[index].style.display = "block";
+    }
+
+    function removeError(index) {
+        campos[index].style.border = '';
+        span[index].style.display = 'none';
+    }
+
+    function emailValidate() {
+        if (!emailRegex.test(campos[0].value)) {
+            setError(0);
+        }
+        else {
+            removeError(0);
+        }
+    }
+
+    function mainPasswordValidate() {
+    }
+
+    function validaTudo (){
+            if (campos[0].value.trim() !== '') {
+                spanOk.style.display = 'flex';
+                form.submit();
+            };
+        }
+</script>
 
 </html>

@@ -1,18 +1,29 @@
 //barra de pesquisa
 function search() {
-    let input = document.getElementById('search-input').value.toLowerCase();
-    let cards = document.querySelectorAll('.all-cards .card');
     
-    for (let i = 0; i < cards.length; i++) {
-        let h4 = cards[i].querySelector('h4');
-        if (h4 && h4.innerHTML.toLowerCase().includes(input)) {
-            cards[i].style.display = "flex";
-        } else {
-            cards[i].style.display = "none";
+    let input = document.getElementById('search-input').value.trim().toLowerCase();
+    
+    let looksDisponiveis = document.querySelector('.looks-disponiveis');
+    
+    looksDisponiveis.innerHTML = '';
+
+    roupaJson.forEach((item, index) => {
+        let titulo = item.nome.toLowerCase();
+
+        if (titulo.includes(input)) {
+            let roupaItem = document.querySelector('.all-cards .base-card .card').cloneNode(true);
+            preencheDadosRoupas(roupaItem, item, index);
+            
+            looksDisponiveis.appendChild(roupaItem);
         }
-    }
+    });
 }
 
+let searchInput = document.getElementById('search-input');
+
+searchInput.addEventListener('click', function(event) {
+    event.preventDefault();
+});
 
 
 //carrossel
@@ -34,21 +45,6 @@ function proximaImg(){
     document.getElementById('radio'+qtd).checked = true;
 }
 
-function search() {
-    let input = document.getElementById('search-input').value.toLowerCase();
-    let cards = document.getElementsByClassName('card');
-    
-    for (let i = 0; i < cards.length; i++) {
-        let h4 = cards[i].getElementsByTagName('h4')[0];
-        if (h4 && h4.innerHTML.toLowerCase().includes(input)) {
-            cards[i].style.visibility = "visible";
-            cards[i].style.display = "flex";
-        } else {
-            cards[i].style.visibility = "hidden";
-            cards[i].style.display = "none";
-        }
-    }
-}
 
 //carrinho
 

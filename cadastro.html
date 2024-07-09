@@ -1,5 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,32 +19,103 @@
         href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 </head>
+
 <body>
-    <div id="Login">
-        <div class="caixa">
-            <img src="images/foto-site-vanessa.ico" alt="">
-            <h1>Cadastro</h1> <br>
-            <div class="name">
-                <label for="name">Nome:</label>
-                <input type="text" placeholder="Nome">
+    <form id="form" >
+            <div class="caixa">
+                <img src="images/foto-site-vanessa.ico" alt="">
+                <h1>Cadastro</h1> <br>
+                <div class="name">
+                    <label for="name">Nome:</label>
+                    <input type="text" placeholder="Nome" class="inputs required" oninput="nameValidate()">
+                    <span class="span-required">Digite o nome do usuário!</span>
+                </div>
+                <div class="email">
+                    <label for="email">E-mail:</label>
+                    <input type="email" class="inputs required" name="email" placeholder="Ex.: ana@gmail.com"
+                        oninput="emailValidate()">
+                    <span class="span-required">Digite um e-mail válido!</span>
+                </div>
+                <div class="senha">
+                    <label for="senha">Senha:</label>
+                    <input type="password" class="inputs required" name="senha" placeholder="Insira a sua senha"
+                        oninput="mainPasswordValidate()">
+                    <span class="span-required">A senha deve ter no mínimo 6 caracteres!</span>
+                </div>
+                <div class="senha">
+                    <label for="senha">Senha:</label>
+                    <input type="password" placeholder="Confirme a sua senha" class="inputs required"
+                        oninput="comparePassword()">
+                    <span class="span-required">As senhas devem ser compatíveis!</span>
+                </div> <br>
+                    <p>Já tem uma conta? <a href="login.html">Faça login!</a></p> <br>
+                    <span id="spanOk" style="display: none;">Envio feito com sucesso!</span>
+                    <button type="submit">Enviar</button>
             </div>
-            <div class="email">
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" placeholder="Ex.: ana@gmail.com">
-            </div>
-            <div class="senha">
-                <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" placeholder="Insira a sua senha">
-            </div>
-            <div class="senha">
-                <label for="senha">Senha:</label>
-                <input type="password" placeholder="Confirme a sua senha">
-            </div> <br>
-            <div class="entrar">
-                <p>Já tem uma conta? <a href="login.html">Faça login!</a></p> <br>
-                <a class="enviar" href="home.html" >Enviar</a>
-            </div>
-        </div>
-    </div>
+    </form>
 </body>
+<script>
+    const login = document.getElementById('form');
+    const campos = document.querySelectorAll(".required");
+    const span = document.querySelectorAll(".span-required");
+    const emailRegex = /^[\w.%+-]+@[\w.-]+\.[a-zA-Z]{2,}$/;
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        nameValidate();
+        emailValidate();
+        mainPasswordValidate();
+        comparePassword();
+
+
+        validaTudo();
+    })
+
+    function setError(index) {
+        campos[index].style.border = '2px solid #e63636';
+        span[index].style.display = "block";
+    }
+
+    function removeError(index) {
+        campos[index].style.border = '';
+        span[index].style.display = 'none';
+    }
+
+    function nameValidate() {
+    }
+
+    function emailValidate() {
+        if (!emailRegex.test(campos[1].value)) {
+            setError(1);
+        }
+        else {
+            removeError(1);
+        }
+    }
+
+    function mainPasswordValidate() {
+        if (campos[2].value.length < 6) {
+            setError(2);
+        }
+        else {
+            removeError(2);
+            comparePassword();
+        }
+    }
+    function comparePassword() {
+        if (campos[2].value == campos[3].value && campos[3].value.length >= 6) {
+            removeError(3);
+        }
+        else {
+            setError(3);
+        }
+    }
+
+    function validaTudo (){
+            if (campos[0].value.trim() !== '' && campos[1].value.trim() !=='' && campos[2].value.length>=6 && campos[2].value === campos[3].value) {
+                spanOk.style.display = 'flex';
+                form.submit();
+            };
+        }
+</script>
 </html>
