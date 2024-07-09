@@ -1,3 +1,20 @@
+//barra de pesquisa
+function search() {
+    let input = document.getElementById('search-input').value.toLowerCase();
+    let cards = document.querySelectorAll('.all-cards .card');
+    
+    for (let i = 0; i < cards.length; i++) {
+        let h4 = cards[i].querySelector('h4');
+        if (h4 && h4.innerHTML.toLowerCase().includes(input)) {
+            cards[i].style.display = "flex";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
+
+
+
 //carrossel
 
 var radio = document.querySelector('.botao-manual');
