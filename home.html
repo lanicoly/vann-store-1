@@ -38,9 +38,8 @@
 </head>
 
 <body>
-    <header>
 
-        
+    <header> 
         <!-- criando o menu fixo do topo da página, nele tem o nome do site e os links navegáveis no próprio html -->
         <nav class="nav-bar">
             <span class="vann-store">
@@ -51,141 +50,181 @@
                 <a href="index.html">Início</a>
                 <a href="#colecao">Coleção</a>
                 <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
-                <a href="medida-ideal.html">Medida Ideal</a>
             </span>
             <div class="icones" >
+            <div class="box-pesquisa">
                 <a href="#">
-                    <i class="bi bi-search"></i>
+                    <div class="lupa-pesquisa">
+                        <i class="bi bi-search"></i>
+                    </div>
+                    <div class="pesquisa-input">
+                        <input id="search-input" type="text" maxlength="800" placeholder="O que você procura? " onkeyup="search()"/>
+                    </div>
+                   <!-- <div class="btn-fechar">
+                        <i class="bi bi-x-circle"></i>
+                    </div>
+                 </a>
+            </div>
+                    </div>-->
                 </a>
-                <a href="#">
-                    <i class="bi bi-cart"></i>
-                </a>
-                <a href="#">
+            </div>            
+                <div class="menu-openner"><span>0</span>🛒</div>
+                <a href="login.html">
                     <i class="bi bi-person-heart"></i>
                 </a>
             </div>          
         </nav>
-        <!-- foi criado uma div "conteudo" abrigando basicamente o restante do body para afastar o resto do conteudo da página do espaço do menu no css. Como o menu é fixo (sempre está presente mesmo rolando a página), o conteudo acabava indo para trás dele no incício da página -->
+    </header>
+    
+    <section class="dentro-pagina">
+        <main>
         <div class="conteudo">
-            <div class="container-services" id="sobre-mim">
-                <div class="service">
-                    <h3><i class="bi bi-truck"></i> ENTREGA GRÁTIS</h3>
-                    <p>Entregamos em toda a cidade de Floriano-PI</p>
-                </div> 
-                <div class="service">
-                    <h3><i class="bi bi-wallet2"></i> ATÉ 12 VEZES SEM JUROS</h3>
-                    <p>Com todos os cartões de crédito</p>
-                </div>
-                <div class="service">
-                    <h3><i class="bi bi-person-lock"></i> SITE SEGURO</h3>
-                    <p>Protegemos seus dados</p>
-                </div>
+        <div class="container-services" id="sobre-mim">
+            <div class="service">
+                <h3><i class="bi bi-truck"></i> ENTREGA GRÁTIS</h3>
+                <p>Entregamos em toda a cidade de Floriano-PI</p>
+            </div> 
+            <div class="service">
+                <h3><i class="bi bi-wallet2"></i> ATÉ 12 VEZES SEM JUROS</h3>
+                <p>Com todos os cartões de crédito</p>
             </div>
-        </header>
-    </div>
-    
-    
-    <div class="all-cards">
-            <div class="base-card">
-            <div class="card">
-                <div class="card--img"><img src=""></div>
-                <div class="card-nome"></div>
-                <div class="desconto"></div>
-                <div class="valor"></div>
-                <a class="botao-compra" id="botao-card" href=""><i class="bi bi-cart-plus-fill"></i> ADICIONAR</a>
+            <div class="service">
+                <h3><i class="bi bi-person-lock"></i> SITE SEGURO</h3>
+                <p>Protegemos seus dados</p>
             </div>
-        </div>            
-            
-            <div class="janela-venda">
-                <div class="carrinho-item">
-                    
-                    <div class="foto-roupa-modal">
-                        <img src="" alt="">
-                    </div>
+        </div>
 
-                    <div class="modal-roupa-info">
-                        <h1>--</h1>
-                        <div class="roupa-tamanhos">
-                            <div data-key="PP" class="roupa-info-tamanho">PP</div>
-                            <div data-key="P" class="roupa-info-tamanho">P</div>
-                            <div data-key="M" class="roupa-info-tamanho">M</div>
-                            <div data-key="G" class="roupa-info-tamanho">G</div>
-                            <div data-key="GG" class="roupa-info-tamanho">GG</div>
+        <section class="carrossel">
+            <div class="conteudo-carrossel">
+                <input type="radio" name="button-radio" id="radio1">
+                <input type="radio" name="button-radio" id="radio2">
+                <input type="radio" name="button-radio" id="radio3">
+    
+                <div class="slide primeiro">
+                    <img class="imagem-slide" src="images/banner1.svg" alt="banner 1">
+                </div>
+    
+                <div class="slide">
+                    <img class="imagem-slide" src="images/banner2.svg" alt="banner 2">
+                </div>
+    
+                <div class="slide">
+                    <img class="imagem-slide" src="images/banner3.svg" alt="banner 3">
+                </div>
+                
+    
+                <div class="nav-auto">
+                    <div class="botao-auto1"></div>
+                    <div class="botao-auto2"></div>
+                    <div class="botao-auto3"></div>
+                </div>
+    
+                <div class="nav-manual">
+                    <label for="radio1" class="botao-manual"></label>
+                    <label for="radio2" class="botao-manual"></label>
+                    <label for="radio3" class="botao-manual"></label>
+                </div>
+    
+            </div>
+        </section>
+
+        <section id="colecao">
+            <h2>Coleções Disponíveis</h2>
+            <div class="looks-disponiveis"></div>
+        </section>
+
+        <div class="all-cards">
+            <div class="base-card">
+                <div class="card">
+                    <div class="card--img"><img src=""></div>
+                    <div class="card-nome"></div>
+                    <div class="desconto" style="text-decoration: line-through;"></div>
+                    <div class="valor"></div>
+                    <a class="botao-compra" id="botao-card" href=""><i class="bi bi-cart-plus-fill"></i>COMPRAR</a>
+                </div>
+                
+                <div class="cart--item">
+                    <img src="" />
+                    <div class="cart--item-nome">--</div>
+                    <div class="cart--item--qtarea">
+                        <button class="cart--item-qtmenos">-</button>
+                        <div class="cart--item--qt">1</div>
+                        <button class="cart--item-qtmais">+</button>
+                    </div>
+                </div>
+            </div>            
+                
+        </div> 
+    
+        <div class="janela-venda">
+            <div class="carrinho-item">
+                
+                <div class="foto-roupa-modal">
+                    <img src="" alt="">
+                </div>
+        
+                <div class="modal-roupa-info">
+                    <h1>--</h1>
+                    <div class="roupa-tamanhos">
+                        <div data-key="PP" class="roupa-info-tamanho selected">PP</div>
+                        <div data-key="P" class="roupa-info-tamanho">P</div>
+                        <div data-key="M" class="roupa-info-tamanho">M</div>
+                        <div data-key="G" class="roupa-info-tamanho">G</div>
+                        <div data-key="GG" class="roupa-info-tamanho">GG</div>
+                    </div>
+                    
+                    <div class="valor-qtd">
+        
+                        <div class="modal-roupa-valor">
+                            <div class="desconto" style="text-decoration: line-through;"></div>
+                            <div class="valor" style="margin-top: 0px;"></div>
                         </div>
                         
-                        <div class="valor-qtd">
-
-                            <div class="modal-roupa-valor">
-                                <div class="desconto"></div>
-                                <div class="valor"></div>
-                            </div>
-                            
-                            <div class="modal-roupa-qtd">
-                                <div class="roupa--qtd">
-                                    <button class="item--qtdmenos">-</button>
-                                    <div class="item--qtd">1</div>
-                                    <button class="item--qtdmais">+</button>
-                                </div>
+                        <div class="modal-roupa-qtd">
+                            <div class="roupa--qtd">
+                                <button class="item--qtdmenos">-</button>
+                                <div class="item--qtd">1</div>
+                                <button class="item--qtdmais">+</button>
                             </div>
                         </div>
-                        <div class="botoes-card">
-                            <a class="botao-compra" id="botao-carrinho" href="">Adicionar ao carrinho</a>
-                            <a class="botao-compra" id="botao-cancelar" href="">Cancelar</a>
-                        </div>
+                    </div>
+                    <div class="botoes-card">
+                        <a class="botao-compra menu-closer" id="botao-carrinho" href="">Adicionar ao carrinho</a>
+                        <a class="botao-compra" id="botao-cancelar" href="">Cancelar</a>
                     </div>
                 </div>
-                </div>
-            </div>  
-    </div>
-            <main>
-                <section class="carrossel">
-                    <div class="conteudo-carrossel">
-                        <input type="radio" name="button-radio" id="radio1">
-                        <input type="radio" name="button-radio" id="radio2">
-                        <input type="radio" name="button-radio" id="radio3">
-            
-                        <div class="slide primeiro">
-                            <img class="imagem-slide" src="images/banner1.svg" alt="banner 1">
-                        </div>
-            
-                        <div class="slide">
-                            <img class="imagem-slide" src="images/banner2.svg" alt="banner 2">
-                        </div>
-            
-                        <div class="slide">
-                            <img class="imagem-slide" src="images/banner3.svg" alt="banner 3">
-                        </div>
-            
-                        <div class="nav-auto">
-                            <div class="botao-auto1"></div>
-                            <div class="botao-auto2"></div>
-                            <div class="botao-auto3"></div>
-                        </div>
-            
-                        <div class="nav-manual">
-                            <label for="radio1" class="botao-manual"></label>
-                            <label for="radio2" class="botao-manual"></label>
-                            <label for="radio3" class="botao-manual"></label>
-                        </div>
-            
-                    </div>
-                    </section>
-
-            <section id="colecao">
-                    <h2>Coleções Disponíveis</h2>
-                <div class="looks-disponiveis"></div>
-                
-                <div class="colecao-roupas"></div>
-            </section>
-            <div id="compra"></div>
-            <br>
+            </div>
         </div>
-        </main>
+    
+    </main>
 
-        <aside>
+    
+    <aside>
+        <div class="cart--area">
+            <h1>Suas roupas</h1>
+            <div class="cart"></div>
+            <div class="cart--details">
+                <div class="cart--totalitem subtotal">
+                    <span>Subtotal</span>
+                    <span>R$ --</span>
+                </div>
+                <div class="cart--totalitem desconto">
+                    <span style="text-decoration: none;">Desconto</span>
+                    <span>R$ --</span>
+                </div>
+                <div class="cart--totalitem total big">
+                    <span>Total</span>
+                    <span>R$ --</span>
+                </div>
+                <div class="cart--finalizar">Finalizar a compra</div>
+            </div>
+        </div>
+    </aside>
 
-        </aside>
-        
+</section>
+
+ 
+</div>
         <!-- fim da página -->
     <footer>
         <div class="footer">
@@ -229,13 +268,9 @@
                 </div>
             </div>
         </div>
+    </div>
     </footer>
-    <div class="fim-pagina">
-        <h5>Todos os direitos reservados à Emilia Nunes, Laís Nicoly, Sarah Ellen e Priscila Freitas</h5>
-    </div>
-    </div>
-    <script src="roupas.js"></script>
-    <script src="script.js"></script>
+        <script src="roupas.js"></script>
+        <script src="script.js"></script>
 </body>
-
 </html>
