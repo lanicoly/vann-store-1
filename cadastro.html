@@ -24,11 +24,11 @@
     <form id="form" >
             <div class="caixa">
                 <img src="images/foto-site-vanessa.ico" alt="">
-                <h1>Cadastro</h1> <br>
+                <h1>Criar conta</h1> <br>
                 <div class="name">
                     <label for="name">Nome:</label>
                     <input type="text" placeholder="Nome" class="inputs required" oninput="nameValidate()">
-                    <span class="span-required">Digite o nome do usuário!</span>
+                    <span class="span-required" style="margin-top: -15px; margin-bottom: 17px;">Digite o nome do usuário!</span>
                 </div>
                 <div class="email">
                     <label for="email">E-mail:</label>
@@ -82,6 +82,12 @@
     }
 
     function nameValidate() {
+        if (campos[0].value == ''){
+            setError(0);
+        }
+        else{
+            removeError(0);
+        }
     }
 
     function emailValidate() {
