@@ -9,12 +9,33 @@ function search() {
 
     roupaJson.forEach((item, index) => {
         let titulo = item.nome.toLowerCase();
+        let descricao = item.descricao.toLowerCase();
 
-        if (titulo.includes(input)) {
+        if (titulo.includes(input) || descricao.includes(input)) {
             let roupaItem = document.querySelector('.all-cards .base-card .card').cloneNode(true);
             preencheDadosRoupas(roupaItem, item, index);
             
             looksDisponiveis.appendChild(roupaItem);
+
+            roupaItem.querySelector('a').addEventListener('click', (e) => {
+                e.preventDefault();
+                console.log('Clicou na roupa');
+        
+                let chave = pegarKey(e);
+                abrirModal();
+        
+                preencheDadosModal(item);
+        
+        
+                document.querySelector('.item--qtd').innerHTML = quantRoupas;
+        
+                escolherTamanho(chave);
+        
+                });
+        
+                botoesFechar();
+                fecharModal();
+        
         }
     });
 }
@@ -71,8 +92,10 @@ const fecharModal = () => {
 };
 
 const botoesFechar = () => {
-        document.querySelector('#botao-cancelar').addEventListener('click', (fecharModal)
-    );
+        document.querySelector('#botao-cancelar').addEventListener('click', (e) => {
+            e.preventDefault();
+            fecharModal();
+        });
 }
 
 
@@ -210,7 +233,7 @@ const fecharCarrinho = () => {
 };
 
 const atualizarCarrinho = () => {
-    document.querySelector('.menu-openner span').innerHTML = carrinho.length;
+    
 
     if (carrinho.length > 0) {
         document.querySelector('.cart--item').style.display = 'flex';
@@ -222,12 +245,16 @@ const atualizarCarrinho = () => {
         let subtotal = 0;
         let desconto = 0;
         let total = 0;
+        let quantidadeCarrinho = 0;
 
         for (let i in carrinho) {
             let roupaItem = roupaJson.find((item) => item.id == carrinho[i].id);
             console.log(roupaItem);
 
             subtotal += (carrinho[i].price * carrinho[i].qt);
+            quantidadeCarrinho += carrinho[i].qt;
+
+            document.querySelector('.menu-openner span').innerHTML = quantidadeCarrinho;
             // valor = subtotal - desconto;
 
             let carrinhoItem = document.querySelector(".all-cards .cart--item").cloneNode(true);
@@ -279,6 +306,9 @@ const atualizarCarrinho = () => {
         document.querySelector('aside').style.display = 'none';
         document.querySelector('main').style.width = '100%';
         document.querySelector('main').style.marginRight = '0%';
+
+        quantidadeCarrinho = 0;
+        document.querySelector('.menu-openner span').innerHTML = quantidadeCarrinho;
     }
 };
 

@@ -324,9 +324,9 @@ main {
 }
 
 .nav-manual, .nav-auto {
-    position: absolute;
+    position: relative;
     width: 100%;
-    margin-top: 32%;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -343,6 +343,10 @@ main {
 
 .nav-manual .botao-manual:hover {
     background-color: #87138f;
+}
+
+.nav-auto {
+    display: none;
 }
 
 #radio1:checked ~ .nav-auto .botao-auto1, #radio2:checked ~ .nav-auto .botao-auto2,  #radio3:checked ~ .nav-auto .botao-auto3{
@@ -638,8 +642,8 @@ div.card:hover {
 }
 
 #colecao {
-    margin-top: 100px;
-    margin-bottom: 0px;
+    margin-top: 70px;
+    margin-bottom: 40px;
     padding: 0px;
 }
 
@@ -849,4 +853,20 @@ aside {
 
 .btn-fechar {
     margin-left: 0px; 
+}
+
+.botao-login {
+    background-color: var(--cor-roxo-claro);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.botao-login:hover {
+    background-color: #c94d00;
+    transform: scale(1.06);
+    transition: all .2s ease-in-out;
+    text-decoration: none;
 }
