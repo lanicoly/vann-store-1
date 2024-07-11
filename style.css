@@ -73,9 +73,59 @@ hr {
     align-items: center; 
     font-size: 17px; 
     margin-right: 20px;
-
+   
 }
 
+.box-pesquisa a {
+    border-radius: 40px;
+    background:none;
+    align-items: center;
+    display: flex;
+    text-decoration: none; /* Remove sublinhado dos links */
+    justify-content: space-between;
+}
+
+
+.pesquisa-input {
+    border-radius: 10px;
+    flex-grow: 1; /* Faz o input crescer para ocupar o espaço disponível */
+}
+
+.box-pesquisa .pesquisa-input input {
+    font-size: 15px;
+    padding: 5px;
+    border: none;
+    color: #ffff; 
+    background: none;
+    width: 0;
+    transition: width 0.3s ease; /*animação à largura do elemento de 3s de duração e suavizado pelo ease*/
+    outline: none; 
+    border-radius: 0;
+}
+
+.box-pesquisa:hover .pesquisa-input input { /*efeito ao passar o mouse sobre o elemento input*/
+    width: 240px;
+}
+
+
+.box-pesquisa .pesquisa-input input::placeholder {
+    color: #e9c9b3; 
+}
+
+.lupa-pesquisa i, .btn-fechar i {
+   cursor: pointer; 
+   margin: 5px;
+
+}
+.lupa-pesquisa i{
+    width: 80px;
+    height: 80px;
+    margin-right: 1px;
+}
+
+.btn-fechar {
+    margin-left: 0px; 
+}
 
 .carousel {
     width: 600px;
@@ -243,16 +293,16 @@ a:hover {
     width: 100%;
 }
 
-.menu a {
+/* .menu a {
     padding: 24px;
     justify-content: center;
     display: inline-block;
     align-items: center;
-}
+} */
 
-.menu a :hover {
+/* .menu a :hover {
     text-decoration: underline;
-}
+} */
 
 .vann-store {
     font-family: "Allura", cursive;
@@ -454,4 +504,19 @@ span.card:hover {
     float: left;
     padding: 0px 40px;
     border-radius: 20px;
+}
+.botao-login {
+    background-color: #512454;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.botao-login:hover {
+    background-color: #c94d00;
+    transform: scale(1.06);
+    transition: all .2s ease-in-out;
+    text-decoration: none;
 }

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- adicionando fonte Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- adicionando fonte Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- linkando o css -->
+    <link rel="stylesheet" href="style-carrinho.css">
+
+    <!-- adicionando o ícone da página direto da pasta "images" que está no mesmo caminho do arquivo do projeto -->
+    <link rel="shortcut icon" href="images/foto-site-vanessa.ico" type="image/x-icon">
+
+    <!-- importando o css do slick carousel para estilizar o carrossel (pontinhos, setinhas, etc) -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css" />
+    <!--Importando bibliotecas para os ícones da barra de navegação e para o container de serviços-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    
+        <!-- titulo que vai aparecer no navegador -->
+    <title>Vann Store</title>
+</head>
+
+<body>
+
+    <header id="inicio"> 
+        <!-- criando o menu fixo do topo da página, nele tem o nome do site e os links navegáveis no próprio html -->
+        <nav class="nav-bar">
+            <span class="vann-store">
+                <h1>Vann Store</h1>
+            </span>
+            <span class="menu">
+                <!-- essas "#" no href servem para eu navegar, ao clicar nelas, dentro da página para onde está o id com seus respectivos nomes -->
+                <a href="#inicio">Início</a>
+                <a href="#colecao">Coleção</a>
+                <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
+            </span>
+            <!-- essa parte se refere aos ícones e botões interativos do menu -->
+            <div class="icones" >
+                <!-- pesquisa interativa que busca por nome e descrição em cada inserção no input -->
+                <div class="box-pesquisa">
+                    <a href="#">
+                        <div class="lupa-pesquisa">
+                            <i class="bi bi-search"></i>
+                        </div>
+                        <div class="pesquisa-input">
+                            <input id="search-input" type="text" maxlength="800" placeholder="O que você procura? " onkeyup="search()"/>
+                        </div>
+                    </a>
+                </div>
+                <!-- carrinho que informa a quantidade total de peças dentro do carrinho      -->
+                <div class="menu-openner"><span>0</span>🛒</div>
+                <!-- botões de login e cadastro que direcionam para suas respectivas telas -->
+                <a class="botao-login" href="login.html">Login
+                </a>
+                <a href="cadastro.html" class="botao-login">Cadastro</a>
+            </div>          
+        </nav>
+    </header>
+    
+    <!-- section que abriga o main e o aside para estilizá-los lado a lado -->
+    <section class="dentro-pagina"> 
+        <main>
+            <!-- essa div conteudo serve para separarmos tudo da página do espaço do menu, pois, como ele é fixo, o conteudo acabava iniciando atrás dele no top 0 -->
+        <div class="conteudo">
+            <!-- informativo de serviços ofertados em cada compra do site -->
+        <div class="container-services" id="sobre-mim">
+            <div class="service">
+                <h3><i class="bi bi-truck"></i> ENTREGA GRÁTIS</h3>
+                <p>Entregamos em toda a cidade de Floriano-PI</p>
+            </div> 
+            <div class="service">
+                <h3><i class="bi bi-wallet2"></i> ATÉ 12 VEZES SEM JUROS</h3>
+                <p>Com todos os cartões de crédito</p>
+            </div>
+            <div class="service">
+                <h3><i class="bi bi-person-lock"></i> SITE SEGURO</h3>
+                <p>Protegemos seus dados</p>
+            </div>
+        </div>
+
+        <!-- carrossel interativo que avança sozinho como também tem botões para avançar entre as fotos -->
+
+        <section class="carrossel">
+            <!-- conteudo somente das fotos -->
+            <div class="conteudo-carrossel">
+
+                
+                <input type="radio" name="button-radio" id="radio1">
+                <input type="radio" name="button-radio" id="radio2">
+                <input type="radio" name="button-radio" id="radio3">
+
+
+                <!-- classe criada para iniciar sempre na primeira foto e quando chegar no final voltar para ela -->
+                <div class="slide primeiro">
+                    <img class="imagem-slide" src="images/banner1.svg" alt="banner 1">
+                </div>
+    
+                <div class="slide">
+                    <img class="imagem-slide" src="images/banner2.svg" alt="banner 2">
+                </div>
+    
+                <div class="slide">
+                    <img class="imagem-slide" src="images/banner3.svg" alt="banner 3">
+                </div>
+            
+
+                <!-- se refere a botões automáticos, ele fica por cima/por baixo do botão manual para ser automaticamente selecionado em uma faixa de tempo, avançando entre as fotos -->
+            </div>
+            <div class="nav-auto">
+                <div class="botao-auto1"></div>
+                <div class="botao-auto2"></div>
+                <div class="botao-auto3"></div>
+            </div>
+
+            <!-- botão manual para avançar as fotos -->
+            <div class="nav-manual">
+                <label for="radio1" class="botao-manual"></label>
+                <label for="radio2" class="botao-manual"></label>
+                <label for="radio3" class="botao-manual"></label>
+            </div>
+        </section>
+<!-- 
+        section vazia pois todos os cartões que são preenchidos na estrutura do card vão ser inseridos nessa seção. No caso da pesquisa, remove aqueles que não condizem com o input -->
+
+        <section id="colecao">
+            <h2>Coleções Disponíveis</h2>
+            <div class="looks-disponiveis"></div>
+        </section>
+
+
+<!-- div que abriga a estrutura dos cartões como também a descrição da peça quando abre o carrinho -->
+        <div class="all-cards">
+            <div class="base-card">
+                <div class="card">
+
+                    <!-- a estrutura é vazia para que os dados inseridos em roupas.js sejam preenchidos e clonados na estrutura conforme existirem -->
+                    <div class="card--img"><img src=""></div>
+                    <div class="card-nome"></div>
+                    <div class="desconto" style="text-decoration: line-through;"></div>
+                    <div class="valor"></div>
+                    <a class="botao-compra" id="botao-card" href=""><i class="bi bi-cart-plus-fill"></i>COMPRAR</a>
+                </div>
+
+
+                <!-- se refere à parte do topo do aside do carrinho aberto, a foto, nome, quantidade, tamanho e botões de aumentar e subtrair peça -->
+                <div class="cart--item">
+                    <img src="" />
+                    <div class="cart--item-nome">--</div>
+                    <div class="cart--item--qtarea">
+                        <button class="cart--item-qtmenos">-</button>
+                        <div class="cart--item--qt">1</div>
+                        <button class="cart--item-qtmais">+</button>
+                    </div>
+                </div>
+            </div>            
+                
+        </div> 
+    
+        <!-- se refere ao modal que é acionado ao clicar em "comprar" em um card, também é só a estrutura pois ele só é montado a partir da peça selecionada puxando os dados da peça -->
+        <div class="janela-venda">
+            <div class="carrinho-item">
+                
+                <!-- separado uma div para foto e para conteudo para deixar a foto à esquerda -->
+                <div class="foto-roupa-modal">
+                    <img src="" alt="">
+                </div>
+        
+                <div class="modal-roupa-info">
+                    <h1>--</h1>
+
+                    <!-- todos os tamanhos são os mesmos que o PP é previamente selecionado. a classe "selected" muda conforme o clique da pessoa no modal -->
+                    <div class="roupa-tamanhos">
+                        <div data-key="PP" class="roupa-info-tamanho selected">PP</div>
+                        <div data-key="P" class="roupa-info-tamanho">P</div>
+                        <div data-key="M" class="roupa-info-tamanho">M</div>
+                        <div data-key="G" class="roupa-info-tamanho">G</div>
+                        <div data-key="GG" class="roupa-info-tamanho">GG</div>
+                    </div>
+                    
+                    <div class="valor-qtd">
+                        
+                        <div class="modal-roupa-valor">
+                            <div class="desconto" style="text-decoration: line-through;"></div>
+                            <div class="valor" style="margin-top: 0px;"></div>
+                        </div>
+                        
+                        <!-- aumenta e diminui a quantidade da peça que será colocada no carrinho -->
+                        <div class="modal-roupa-qtd">
+                            <div class="roupa--qtd">
+                                <button class="item--qtdmenos">-</button>
+                                <div class="item--qtd">1</div>
+                                <button class="item--qtdmais">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="botoes-card">
+                        <!-- botão de adicionar ao carrinho fecha o modal e abre o carrinho -->
+                        <a class="botao-compra menu-closer" id="botao-carrinho" href="">Adicionar ao carrinho</a>
+
+                        <!-- botão de cancelar fecha o modal e reseta o que foi escolhido -->
+                        <a class="botao-compra" id="botao-cancelar" href="">Cancelar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </main>
+
+    <!-- parte do carrinho que só é aberta adicionado pelo menos 1 item no carrinho. é aberta automaticamente ao adicionar item ou se tiver no minimo 1 item abre pelo emoji de carrinho no menu -->
+    <aside>
+        <div class="cart--area">
+            <h1>Suas roupas</h1>
+            <div class="cart"></div>
+            <div class="cart--details">
+                <div class="cart--totalitem subtotal">
+                    <span>Subtotal</span>
+                    <span>R$ --</span>
+                </div>
+                <div class="cart--totalitem desconto">
+                    <span style="text-decoration: none;">Desconto</span>
+                    <span>R$ --</span>
+                </div>
+                <div class="cart--totalitem total big">
+                    <span>Total</span>
+                    <span>R$ --</span>
+                </div>
+
+                <!-- apenas fecha o carrinho -->
+                <div class="cart--finalizar">Finalizar a compra</div>
+            </div>
+        </div>
+    </aside>
+
+</section>
+
+ 
+</div>
+        <!-- fim da página -->
+    <footer>
+        <div class="footer">
+            <div class="sobre-loja">
+                <div class="foto-sobre-mim">
+                    <img class="foto-vanessa" src="images/foto-vanessa.jpg" alt="foto-vanessa">
+                </div>
+                <div class="texto-sobre-mim">
+                    <h2>Criação da loja</h2>
+                    <p> Sou apaixonada por moda e tendências. Meu compromisso vai além do estilo; é sobre cuidar do meu corpo e mente. Amo registrar momentos através da fotografia e explorar experiências gastronômicas. Estou sempre aberta a novas aventuras!
+                    Em fevereiro de 2023, criei a Vann Store para mulheres elegantes e clássicas, oferecendo produtos de qualidade para diversos momentos do dia.</p>
+                </div>
+                </div>
+                <div class="sobre-loja">
+                    <div class="contato">
+                        <i class="bi bi-telephone-fill"></i>
+                        <h3>(89) 9908-7650</h3>
+                    </div>
+                    <div class="contato">
+                        <i class="bi bi-headset"></i>
+                        <h3>0800 729 5678</h3>
+                    </div>
+                    <div class="contato">
+                        <i class="bi bi-envelope-fill"></i>
+                        <h3>vanessa.veloso@ifpi.edu.br</h3>
+                    </div>
+                    <div class="contato">
+                        <a href="https://www.instagram.com/vann_._store?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                            <i class="bi bi-instagram"></i>
+                            <h3>@vann_._store</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="sobre-loja">
+                    <div class="paginas">
+                        <a href="#inicio">Inicio</a>
+                        <a href="#colecao">Coleções</a>
+                        <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
+        <script src="roupas.js"></script>
+        <script src="script.js"></script>
+</body>
+</html>
