@@ -210,7 +210,7 @@ button:hover {
 
 
 footer {
-    height: 200px;
+    height: max-content;
     padding-left: 10px;
     background-color: var(--cor-titulo-laranja-escuro);
     margin: 0px;

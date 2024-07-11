@@ -26,6 +26,6 @@ Esse é só o começo! 🌟💪
 
 <br>
 
-![Badge Finalizado](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
+![Badge Finalizado](http://img.shields.io/static/v1?label=STATUS&message=FINALIZADO&color=GREEN&style=for-the-badge)
 
 [^1]: Loja de moda online da orientadora Vanessa Veloso 
