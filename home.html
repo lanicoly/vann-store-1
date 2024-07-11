@@ -39,7 +39,7 @@
 
 <body>
 
-    <header> 
+    <header id="inicio"> 
         <!-- criando o menu fixo do topo da página, nele tem o nome do site e os links navegáveis no próprio html -->
         <nav class="nav-bar">
             <span class="vann-store">
@@ -47,11 +47,13 @@
             </span>
             <span class="menu">
                 <!-- essas "#" no href servem para eu navegar, ao clicar nelas, dentro da página para onde está o id com seus respectivos nomes -->
-                <a href="index.html">Início</a>
+                <a href="#inicio">Início</a>
                 <a href="#colecao">Coleção</a>
                 <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
             </span>
+            <!-- essa parte se refere aos ícones e botões interativos do menu -->
             <div class="icones" >
+                <!-- pesquisa interativa que busca por nome e descrição em cada inserção no input -->
                 <div class="box-pesquisa">
                     <a href="#">
                         <div class="lupa-pesquisa">
@@ -60,12 +62,11 @@
                         <div class="pesquisa-input">
                             <input id="search-input" type="text" maxlength="800" placeholder="O que você procura? " onkeyup="search()"/>
                         </div>
-                        <!-- <div class="btn-fechar">
-                            <i class="bi bi-x-circle"></i>
-                        </div>-->
                     </a>
-                </div>     
+                </div>
+                <!-- carrinho que informa a quantidade total de peças dentro do carrinho      -->
                 <div class="menu-openner"><span>0</span>🛒</div>
+                <!-- botões de login e cadastro que direcionam para suas respectivas telas -->
                 <a class="botao-login" href="login.html">Login
                 </a>
                 <a href="cadastro.html" class="botao-login">Cadastro</a>
@@ -73,9 +74,12 @@
         </nav>
     </header>
     
-    <section class="dentro-pagina">
+    <!-- section que abriga o main e o aside para estilizá-los lado a lado -->
+    <section class="dentro-pagina"> 
         <main>
+            <!-- essa div conteudo serve para separarmos tudo da página do espaço do menu, pois, como ele é fixo, o conteudo acabava iniciando atrás dele no top 0 -->
         <div class="conteudo">
+            <!-- informativo de serviços ofertados em cada compra do site -->
         <div class="container-services" id="sobre-mim">
             <div class="service">
                 <h3><i class="bi bi-truck"></i> ENTREGA GRÁTIS</h3>
@@ -91,12 +95,19 @@
             </div>
         </div>
 
+        <!-- carrossel interativo que avança sozinho como também tem botões para avançar entre as fotos -->
+
         <section class="carrossel">
+            <!-- conteudo somente das fotos -->
             <div class="conteudo-carrossel">
+
+                
                 <input type="radio" name="button-radio" id="radio1">
                 <input type="radio" name="button-radio" id="radio2">
                 <input type="radio" name="button-radio" id="radio3">
-    
+
+
+                <!-- classe criada para iniciar sempre na primeira foto e quando chegar no final voltar para ela -->
                 <div class="slide primeiro">
                     <img class="imagem-slide" src="images/banner1.svg" alt="banner 1">
                 </div>
@@ -109,7 +120,8 @@
                     <img class="imagem-slide" src="images/banner3.svg" alt="banner 3">
                 </div>
             
-                
+
+                <!-- se refere a botões automáticos, ele fica por cima/por baixo do botão manual para ser automaticamente selecionado em uma faixa de tempo, avançando entre as fotos -->
             </div>
             <div class="nav-auto">
                 <div class="botao-auto1"></div>
@@ -117,28 +129,37 @@
                 <div class="botao-auto3"></div>
             </div>
 
+            <!-- botão manual para avançar as fotos -->
             <div class="nav-manual">
                 <label for="radio1" class="botao-manual"></label>
                 <label for="radio2" class="botao-manual"></label>
                 <label for="radio3" class="botao-manual"></label>
             </div>
         </section>
+<!-- 
+        section vazia pois todos os cartões que são preenchidos na estrutura do card vão ser inseridos nessa seção. No caso da pesquisa, remove aqueles que não condizem com o input -->
 
         <section id="colecao">
             <h2>Coleções Disponíveis</h2>
             <div class="looks-disponiveis"></div>
         </section>
 
+
+<!-- div que abriga a estrutura dos cartões como também a descrição da peça quando abre o carrinho -->
         <div class="all-cards">
             <div class="base-card">
                 <div class="card">
+
+                    <!-- a estrutura é vazia para que os dados inseridos em roupas.js sejam preenchidos e clonados na estrutura conforme existirem -->
                     <div class="card--img"><img src=""></div>
                     <div class="card-nome"></div>
                     <div class="desconto" style="text-decoration: line-through;"></div>
                     <div class="valor"></div>
                     <a class="botao-compra" id="botao-card" href=""><i class="bi bi-cart-plus-fill"></i>COMPRAR</a>
                 </div>
-                
+
+
+                <!-- se refere à parte do topo do aside do carrinho aberto, a foto, nome, quantidade, tamanho e botões de aumentar e subtrair peça -->
                 <div class="cart--item">
                     <img src="" />
                     <div class="cart--item-nome">--</div>
@@ -152,15 +173,19 @@
                 
         </div> 
     
+        <!-- se refere ao modal que é acionado ao clicar em "comprar" em um card, também é só a estrutura pois ele só é montado a partir da peça selecionada puxando os dados da peça -->
         <div class="janela-venda">
             <div class="carrinho-item">
                 
+                <!-- separado uma div para foto e para conteudo para deixar a foto à esquerda -->
                 <div class="foto-roupa-modal">
                     <img src="" alt="">
                 </div>
         
                 <div class="modal-roupa-info">
                     <h1>--</h1>
+
+                    <!-- todos os tamanhos são os mesmos que o PP é previamente selecionado. a classe "selected" muda conforme o clique da pessoa no modal -->
                     <div class="roupa-tamanhos">
                         <div data-key="PP" class="roupa-info-tamanho selected">PP</div>
                         <div data-key="P" class="roupa-info-tamanho">P</div>
@@ -170,12 +195,13 @@
                     </div>
                     
                     <div class="valor-qtd">
-        
+                        
                         <div class="modal-roupa-valor">
                             <div class="desconto" style="text-decoration: line-through;"></div>
                             <div class="valor" style="margin-top: 0px;"></div>
                         </div>
                         
+                        <!-- aumenta e diminui a quantidade da peça que será colocada no carrinho -->
                         <div class="modal-roupa-qtd">
                             <div class="roupa--qtd">
                                 <button class="item--qtdmenos">-</button>
@@ -184,8 +210,12 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="botoes-card">
+                        <!-- botão de adicionar ao carrinho fecha o modal e abre o carrinho -->
                         <a class="botao-compra menu-closer" id="botao-carrinho" href="">Adicionar ao carrinho</a>
+
+                        <!-- botão de cancelar fecha o modal e reseta o que foi escolhido -->
                         <a class="botao-compra" id="botao-cancelar" href="">Cancelar</a>
                     </div>
                 </div>
@@ -194,7 +224,7 @@
     
     </main>
 
-    
+    <!-- parte do carrinho que só é aberta adicionado pelo menos 1 item no carrinho. é aberta automaticamente ao adicionar item ou se tiver no minimo 1 item abre pelo emoji de carrinho no menu -->
     <aside>
         <div class="cart--area">
             <h1>Suas roupas</h1>
@@ -212,6 +242,8 @@
                     <span>Total</span>
                     <span>R$ --</span>
                 </div>
+
+                <!-- apenas fecha o carrinho -->
                 <div class="cart--finalizar">Finalizar a compra</div>
             </div>
         </div>
@@ -259,7 +291,6 @@
                         <a href="#inicio">Inicio</a>
                         <a href="#colecao">Coleções</a>
                         <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
-                        <a href="medida-ideal.html">Medida Ideal</a>
                     </div>
                 </div>
             </div>

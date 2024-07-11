@@ -293,16 +293,16 @@ a:hover {
     width: 100%;
 }
 
-.menu a {
+/* .menu a {
     padding: 24px;
     justify-content: center;
     display: inline-block;
     align-items: center;
-}
+} */
 
-.menu a :hover {
+/* .menu a :hover {
     text-decoration: underline;
-}
+} */
 
 .vann-store {
     font-family: "Allura", cursive;
@@ -504,4 +504,19 @@ span.card:hover {
     float: left;
     padding: 0px 40px;
     border-radius: 20px;
+}
+.botao-login {
+    background-color: #512454;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.botao-login:hover {
+    background-color: #c94d00;
+    transform: scale(1.06);
+    transition: all .2s ease-in-out;
+    text-decoration: none;
 }

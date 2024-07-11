@@ -38,6 +38,8 @@ hr {
     height: 4px;
 }
 
+
+
 .container-services{
     height:90px;
     width: 100%;
@@ -264,13 +266,14 @@ a:hover {
     font-size: 28px;
     color: var(--cor-titulo-bege);
     display: inline-block;
-    width: 30%;
+    width: max-content;
     position: absolute;
 }
 
 .vann-store h1 {
     text-align: left;
     padding-left: 32px;
+    width: max-content;
 }
 
 .conteudo {
